@@ -1,0 +1,269 @@
+<div class="player_info_wrapper">
+    <div class="player_face_wrapper" style="background-image: url('http://www.grid-iron.org/images/players/pos4.png'); background-repeat: no-repeat;">
+    <div onclick="document.location.href='http://www.grid-iron.org/club/pldetails/team_id/111/back//ntid/0/playerid/1/Array'" style="z-index: 9000; position: absolute; width: 15px; height: 20px;  background-image: url(http://www.grid-iron.org/images/icons/arrow-l2.png); background-position: top; top: 70px; left: -6px; cursor: pointer;" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"></div><div onclick="document.location.href='http://www.grid-iron.org/club/pldetails/team_id/111/back//ntid/0/playerid/2076908/Array'" style="z-index: 9000; position: absolute; width: 15px; height: 20px;  background-image: url(http://www.grid-iron.org/images/icons/arrow-r2.png); background-position: top; top: 70px; left: 111px; cursor: pointer;" onmouseover="this.style.backgroundPosition='bottom'" onmouseout="this.style.backgroundPosition='top'"></div>    </div>
+    <div class="player_basic_info_wrapper">
+        <div class="player_basic_info_top">
+            <div class="player_basic_info_row">
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td width="30" height="20" align="center" valign="middle"><img src="http://www.grid-iron.org/images/flags/byid/png/59.png" width="28" height="16" border="0" title="Ukraine" alt="Ukraine" /></td>
+                        <td align="left" valign="middle" style="padding-left: 2px; font-size: 13px; font-weight: bold; color: #000000;">name<font style="font-size: 10px; font-weight: normal;">&nbsp;&nbsp;(ID 1)</font></td>
+                        <td valign="middle" align="right" style="padding-left: 10px;">
+                            <div class="bookmark_small" style="float: right; cursor: pointer;" onclick="document.location.href='http://www.grid-iron.org/store/supporter'"></div>                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="player_basic_info_row">
+                <table align="left" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td width="30" height="20" align="center" valign="middle">
+                            <img src="http://www.grid-iron.org/images/flags/byid/png/26.png" width="28" height="16" border="0" title="Polska" alt="Polska" />
+                        </td>
+                    <td align="left" valign="middle" style="padding-left: 2px; font-size: 13px;"><a style="text-decoration: none;" href="http://www.grid-iron.org/club/team_id/111">team</a> (Polska)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="player_basic_info_row" style="margin-left: 30px;">
+                <table align="left" cellpadding="1" cellspacing="0" border="0">
+                    <tr>
+                        <td align="left" height="20" style="font-size: 13px; font-weight: normal;">22-letni   Rozgrywający</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="player_basic_info_bottom" style="margin-top: -2px;">
+            <table cellspacing="0" cellpadding="0" border="0" style="padding-top: 2px;">
+                <tr>
+                    <td width="100" align="right" valign="middle" style="font-size: 13px; font-weight: bold;">
+                        Ocena&nbsp;
+                    </td>
+                    <td width="99" align="left" valign="middle"><img src="http://www.grid-iron.org/images/icons/rating_7.png" border="0" width="66" height="27" alt="" /></td>
+                    <td width="140" align="right" valign="middle" style="font-size: 13px; font-weight: bold; color: #000000;">Doświadczenie&nbsp;</td>
+                    <td width="66" align="left" valign="middle"><img src="http://www.grid-iron.org/images/icons/rating_6.png" border="0" width="66" height="27" alt="" /></td>
+                    <td width="140" align="right" valign="middle" style="font-size: 13px; font-weight: bold; color: #000000;">Fizyczne&nbsp;</td>
+                    <td width="90" align="left" valign="middle" style="font-size: 12px; padding-left: 2px;"><font style="color: #397739;">100%</font></td>
+                </tr>
+                <tr>
+                    <td align="right" valign="middle" style="font-size: 13px; font-weight: bold; color: #000000;">Talent&nbsp;</td><td align="left" valign="middle"><img src="http://www.grid-iron.org/images/icons/rating_3.png" border="0" width="66" height="27" alt="" /></td>
+                    <td align="right" valign="middle" style="font-size: 12px; font-weight: bold; color: #000000;">Zgranie&nbsp;</td>
+                    <td align="left" valign="middle"><img src="http://www.grid-iron.org/images/icons/rating_10.png" border="0" width="66" height="27" alt="" /></td>
+                    <td align="right" valign="middle" style="font-size: 12px; font-weight: bold; color: #000000;">Pensja&nbsp;</td>
+                    <td width="90" align="left" valign="middle" style="font-size: 12px; padding-left: 2px;"><b>$&nbsp;5,183 </b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="player_graph_wrapper">
+                <div style="position: relative; width: 152px; height: 99px; text-align: center;">
+            <img src="http://www.grid-iron.org/pages/club-players/attributes_graph.php?plid=1" style="position: relative; top: 4px;" width="118" height="99" border="0" alt="" />
+            <div style="position: absolute; top: 0px; left: 73px; width: 20px; height: 13px;" onmousemove="displayTooltip('Attacking')" onmouseout="hideTooltip()"></div>
+            <div style="position: absolute; top: 45px; left: 115px; width: 20px; height: 13px;" onmousemove="displayTooltip('Defending')" onmouseout="hideTooltip()"></div>
+            <div style="position: absolute; top: 89px; left: 72px; width: 20px; height: 13px;" onmousemove="displayTooltip('Physical')" onmouseout="hideTooltip()"></div>
+            <div style="position: absolute; top: 22px; left: 16px; width: 20px; height: 13px;" onmousemove="displayTooltip('Tactical')" onmouseout="hideTooltip()"></div>
+            <div style="position: absolute; top: 76px; left: 21px; width: 20px; height: 13px;" onmousemove="displayTooltip('Kicking')" onmouseout="hideTooltip()"></div>
+        </div>
+            </div>
+</div>
+
+<div id="profile"><div id="strength_popup" class="player_popup" style="display: none; top: 248px; left: 700px;"><table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;"><tr><td valign="middle" align="center" style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Siła zawodnika zagrożona</td></tr><tr><td valign="middle" align="left" style="font-size: 13px;">W silniku v2, siła zawodnika będzie niższa (15 zamiast 11) z powodu jego BMI (stosunek wagi do wzrostu)!<br />Musisz podnieść jego BMI, żeby zawodnik stał się silniejszy!<br />Możesz osiągnąć to przez wysłanie zawodnika na specjalną dietę w centrum żywieniowym.</td></tr></table></div><div id="speed_popup" class="player_popup" style="display: none; top: 222px; left: 700px;"><table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;"><tr><td valign="middle" align="center" style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Szybkość zawodnika zagrożona</td></tr><tr><td valign="middle" align="left" style="font-size: 13px;">W silniku v2, szybkość zawodnika będzie niższa (20 zamiast of 9) ze względu na jego BMI (stosunek wagi do wzrostu)!<br />Musisz obniżyć jego BMI, żeby zawodnik stał się szybszy!<br />Możesz osiągnąć to przez wysłanie zawodnika na specjalną dietę w centrum żywieniowym.</td></tr></table></div><div id="agility_popup" class="player_popup" style="display: none; top: 268px; left: 700px;"><table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;"><tr><td valign="middle" align="center" style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Zwinność zawodnika zagrożona</td></tr><tr><td valign="middle" align="left" style="font-size: 13px;">W silniku v2, zwinność zawodnika będzie niższa ( zamiast 7) z powodu jego BMI (stosunek wagi do wzrostu)!<br />Musisz obniżyć jego BMI, żeby zawodnik stał się zwinniejszy!<br />Możesz osiągnąć to przez wysłanie zawodnika na specjalną dietę w centrum żywieniowym.</td></tr></table></div>    <div class="header_wrapper" style="z-index: 9999;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            UMIEJĘTNOŚCI            <div style="float: right;">
+                <table cellspacing="0" cellpadding="0" border="0" style="font-size: 10px;">
+                    <tr>
+                        <td valign="middle" style="padding-left: 2px;">Pokaż szczegóły</td>
+                        <td valign="middle" style="padding-right: 5px;"><input type="checkbox" style="cursor: pointer;" name="detail_skills" onclick="document.location.href='http://www.grid-iron.org/store/supporter'" /></td>
+                                                    <td valign="middle" style="padding-right: 5px;"><div id="supporter_small" style="margin-top: 0px; margin-left: 0px; position: relative;" onclick="document.location.href='http://www.grid-iron.org/store/supporter'"></div></td>
+                                            </tr>
+                </table>
+            </div>
+        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell_txt1">&nbsp;Ustawianie się</div>
+        <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">1</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Podawanie</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">2</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Tackling</div>
+        <div class="player_data_cell_val1"><span style="color: #000088; font-weight: bold;">3</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Szybkość</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">4</span></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: 0px;">
+        <div class="player_data_cell_txt2">&nbsp;Przegląd pola</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">5</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Łapanie</div>
+        <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">6</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Blokowanie</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">7</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Siła</div>
+        <div class="player_data_cell_val1"><span style="color: #888800; font-weight: bold;">8</span></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: 0px;">
+        <div class="player_data_cell_txt1">&nbsp;Inteligencja</div>
+        <div class="player_data_cell_val1"><span style="color: #008800; font-weight: bold;">9</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Carrying</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">10</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Kopanie</div>
+        <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">11</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Zwinność</div>
+        <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">12</span></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: 0px;">
+        <div class="player_data_cell_txt2">&nbsp;Agresja</div>
+        <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">13</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Praca nóg</div>
+        <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">14</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Puntowanie</div>
+        <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">15</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Wytrzymałość</div>
+        <div class="player_data_cell_val1"><span style="color: #000088; font-weight: bold;">16</span></div>
+    </div>
+    
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            WAGA I WZROST        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell_txt1">&nbsp;Waga (kg)</div>
+        <div class="player_data_cell_val1"><b>100</b></div>
+        <div class="player_data_cell_txt2">&nbsp;Wzrost (cm)</div>
+        <div class="player_data_cell_val2"><b>200</b></div>
+        <div class="player_data_cell_txt1">&nbsp;BMI</div>
+        <div class="player_data_cell_val1"><b>30.0</b></div>
+        <div class="player_data_cell_txt2">&nbsp;</div>
+        <div class="player_data_cell_val2"></div>
+    </div>
+    
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            INNE        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell_txt2">&nbsp;Pracowitość</div>
+        <div class="player_data_cell_val2"><span style="color: #008800; font-weight: bold;">17</span></div>
+        <div class="player_data_cell_txt1">&nbsp;Consistency</div>
+        <div class="player_data_cell_val1"><span style="color: #008800; font-weight: bold;">18</span></div>
+        <div class="player_data_cell_txt2">&nbsp;Tygodni w klubie</div>
+        <div class="player_data_cell_val2"><span style="color: #008800; font-weight: bold;">1</span></div>
+        <div class="player_data_cell_txt1">&nbsp;</div>
+        <div class="player_data_cell_val1"></div>
+    </div>
+    
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            KOMENTARZE TRENERA        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell1">&nbsp;Ten zawodnik gra na pozycji: <b>Rozgrywający</b></div>
+        <div class="player_data_cell1">&nbsp;Trener zauważył ponadto, że  name ma tendencję do <b>przybierania na wadze</b>.</div>    </div>
+    
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            KOMENTARZE FIZJOTERAPEUTY        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell1">&nbsp;name jest <b>zdrowy</b> i gotowy do gry</div>
+    </div>
+    
+        <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            TRENING        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell1">
+            <table cellspacing="1" cellpadding="0" border="0">
+                <tr>
+                    <td valign="middle" align="right">Zmień trening na</td>
+                    <td valign="middle">
+                        <select id="pltrain" name="pltrain" class="gui_select" onchange="do_change_training(1)" style="font-size: 13px; margin-top: -2px;">
+                            <optgroup label="Ofensywne"></optgroup>
+                            <option value="1|0">Ofensywne / Wszystko</option>
+                            <option value="1|4">Ofensywne / Zwinność</option>
+                            <option value="1|6">Ofensywne / Łapanie</option>
+                            <option value="1|7">Ofensywne / Podawanie</option>
+                            <option value="1|9">Ofensywne / Carrying</option>
+                            <option value="1|12">Ofensywne / Praca nóg</option>
+                            <optgroup label="Defensywne"></optgroup>
+                            <option value="2|0">Defensywne / Wszystko</option>
+                            <option value="2|4">Defensywne / Zwinność</option>
+                            <option value="2|5">Defensywne / Tackling</option>
+                            <option value="2|10">Defensywne / Blokowanie</option>
+                            <optgroup label="Kopanie"></optgroup>
+                            <option value="3|0">Kopanie / Wszystko</option>
+                            <option value="3|13">Kopanie / Kopanie</option>
+                            <option value="3|14">Kopanie / Puntowanie</option>
+                            <optgroup label="Taktyczne"></optgroup>
+                            <option value="4|0">Taktyczne / Wszystko</option>
+                            <option value="4|1">Taktyczne / Ustawianie się</option>
+                            <option value="4|8">Taktyczne / Przegląd pola</option>
+                            <optgroup label="Kondycja"></optgroup>
+                            <option value="5|0">Kondycja / Wszystko</option>
+                            <option value="5|2">Kondycja / Szybkość</option>
+                            <option value="5|3" selected>Kondycja / Siła</option>
+                            <option value="5|11">Kondycja / Wytrzymałość</option>
+                        </select>
+                    </td>
+                    <td valign="middle" style="padding-left: 2px;">
+                        <div id="training_loading" style="width: 16px; height: 16px; background-image: url('http://www.grid-iron.org/images/icons/loader_training.png'); background-repeat: no-repeat; background-position: top;"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            SHORT NOTES (MAX. 500 CHARACTERS)        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px; margin-bottom: 2px;">
+        <div class="player_data_cell1" style="height: auto;">
+            <textarea id="player_notes"></textarea>
+            <table cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td valign="middle">                        <input type="button" class="gui_button2" onclick="document.location.href='http://www.grid-iron.org/store/supporter'" value="Zapisz zmiany" />
+                        
+                                        </td>
+                                        <td valign="middle" align="left" style="padding-left: 2px;">
+                        <a href="http://www.grid-iron.org/store/supporter"><img src="http://www.grid-iron.org/images/icons/supporter2.png" width="22" height="22" border="0" alt="" /></a>
+                    </td>
+                                        <td valign="middle" align="left" style="padding-left: 2px;">
+                        <div id="notes_save" style="width: 16px; height: 16px; background-image: url('http://www.grid-iron.org/images/icons/loader_training.gif'); background-repeat: no-repeat; background-position: top;"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+        
+    <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+        <div class="header_left"></div>
+        <div class="header_tile" style="width: 976px;">
+            PORÓWNANIE        </div>
+        <div class="header_right"></div>
+    </div>
+    <div class="player_data_wrapper" style="margin-top: -1px;">
+        <div class="player_data_cell1">
+            <table cellspacing="1" cellpadding="0" border="0">
+                <tr>
+                    <td valign="middle" align="right">Porównaj name z</td>
+                    <td valign="middle" align="left" style="padding-left: 4px;"><input type="hidden" id="cmp_player_id1" value="1" /><select id="cmp_player_id2" name="cmp_player_id" class="gui_select" style="font-size: 13px; margin-top: -2px;"><optgroup label="Liniowy Ofensywny" /><option value="2076900">Bartłomiej Solarski</option><option value="2076903">Klement Glinkowski</option><option value="2076902">Sylwek Rykaczewski</option><option value="2160569">Mike Finner</option><option value="2076901">Stanisław Fyda</option><option value="2232105">Zygmunt Imiołek</option><option value="2076899">Dawid Rowiński</option><optgroup label="Silny Skrzydłowy" /><option value="2132594">Klemens Jobda</option><option value="2187562">Urban Pasek</option><option value="2223596">Kacper Dąbkowski</option><optgroup label="Skrzydłowy" /><option value="2178365">Florian Nagórski</option><option value="2145990">Eugeniusz Czubkowski</option><option value="2076904">Grzegorz Stochaj</option><option value="2076905">Alojzy Krzyżowski</option><option value="2220512">Witold Mycek</option><optgroup label="Rozgrywający" /><option value="2076908">Kazimierz Wilga</option><optgroup label="Biegający" /><option value="2113169">Lucas Eliasson</option><option value="2076907">Dariusz Bajkowski</option><option value="2190472">Kazimierz Dziekański</option><option value="2114794">Jindřich Hampl</option><optgroup label="Liniowy Defensywny" /><option value="2113599">Dymitr Dziewanowski</option><option value="2139724">Mateusz Drgas</option><option value="2227850">Devid Sangiuolo</option><option value="2076912">Mieczysław Orzoł</option><option value="2076911">Kosma Mosur</option><option value="2076910">Ambroży Kuboń</option><option value="2204453">Norbert Hałat</option><optgroup label="Zaliniowy" /><option value="2219073">Aleksander Kobyłka</option><option value="2213007">Florian Turzyński</option><option value="2076915">Stanisław Lisicki</option><option value="2100092">Jakub Skrzypkowski</option><option value="2076916">Andrzej Kałwak</option><option value="2076914">Witus Rudawski</option><option value="2110777">Zbyszek Dzik</option><optgroup label="Kryjący" /><option value="2076923">Otto Wiater</option><option value="2076917">Władysław Myrcha</option><option value="2226590">Damian Lelonek</option><optgroup label="Zabezpieczający" /><option value="2076920">Lech Kurzepa</option><option value="2076922">Sylwester Gadzina</option><option value="2084898">Norbert Boroch</option><optgroup label="Kopacz" /><option value="2076898">Zachariasz Nakonieczny</option><option value="2224522">Salvatore Cariello</option><option value="2233394">Borys Świstek</option><option value="2119942">Aleksy Głowicki</option><optgroup label="Gunner" /><option value="2076921">Mieczysław Drej</option><option value="2215521">Wawrzyniec Plewiński</option><optgroup label="Kick returner" /><option value="2076924">Kazimierz Murawski</option></select>
+                    </td>
+                    <td valign="middle" align="left" style="padding-left: 4px;"><div id="supporter_small" style="margin-top: 0px;" onclick="document.location.href='http://www.grid-iron.org/store/supporter'"></div></td>
+                </tr>
+        </table>
+        </div>
+    </div>
+    </div>
