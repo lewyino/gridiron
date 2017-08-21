@@ -1,5 +1,6 @@
 import sqlite3
 
+from model.Formation import Formation
 from model.Player import *
 
 
@@ -133,8 +134,8 @@ class PlayerSimpleDbConnect:
             data = dict(
                 qb_point = round(player.qb_point, 1),
                 rb_point = round(player.rb_point, 1),
-                wr_oint = round(player.wr_point, 1),
-                te_toint = round(player.te_point, 1),
+                wr_point = round(player.wr_point, 1),
+                te_point = round(player.te_point, 1),
                 ol_point = round(player.ol_point, 1),
                 dl_point = round(player.dl_point, 1),
                 de_point = round(player.de_point, 1),
@@ -154,64 +155,50 @@ class PlayerSimpleDbConnect:
             return False
 
     def get_best_qb_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY qbPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('qb', players_quantity)
 
     def get_best_rb_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY rbPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('rb', players_quantity)
 
     def get_best_wr_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY wrPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('wr', players_quantity)
 
     def get_best_te_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY tePoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('te', players_quantity)
 
     def get_best_ol_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY olPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('ol', players_quantity)
 
     def get_best_dl_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY dlPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('dl', players_quantity)
 
     def get_best_de_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY dePoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('de', players_quantity)
 
     def get_best_mlb_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY mlbPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('mlb', players_quantity)
 
     def get_best_olb_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY olbPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('olb', players_quantity)
 
     def get_best_cb_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY cbPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('cb', players_quantity)
 
     def get_best_sf_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY sfPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('sf', players_quantity)
 
     def get_best_k_players(self, players_quantity: int = 5):
-        query = 'SELECT * FROM %s GROUP BY id ORDER BY kPoint DESC LIMIT %d' % (self.__table_name, players_quantity)
-        self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.get_best_players('k', players_quantity)
+
+    def get_best_players(self, player_position: str, players_quantity: int = 5):
+        try:
+            Formation.get_allow_position().index(player_position)
+            query = 'SELECT * FROM %s GROUP BY id ORDER BY %sPoint DESC LIMIT %d' \
+                    % (self.__table_name, player_position, players_quantity)
+            self.__cursor.execute(query)
+            return self.__cursor.fetchall()
+        except:
+            return []
 
     def get_players_with_potential(
             self,

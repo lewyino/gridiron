@@ -274,10 +274,10 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
-        point += ((self.intelligence if self.intelligence >= 15 else self.intelligence - 5) ** 2)
-        max_point += 20 ** 2
+        point += ((self.intelligence if self.intelligence >= 15 else self.intelligence - 5) * 4)
+        max_point += 20 * 4
         point += self.consistency * 4
         max_point += 20 * 4
         point += self.passing * 3
@@ -295,7 +295,7 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.speed * 3
         max_point += 20 * 3
@@ -303,10 +303,12 @@ class Player:
         max_point += 20 * 3
         point += self.carrying * 2
         max_point += 20 * 2
-        point += self.agility
+        point += self.blocking * 2
+        max_point += 20 * 2
+        point += self.agility * 2
+        max_point += 20 * 2
         point += self.footwork
-        point += self.blocking
-        max_point += 60
+        max_point += 20
         self.rb_point = float(point) / max_point * 100
         return self.rb_point
 
@@ -314,17 +316,21 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.speed * 4
         max_point += 20 * 4
-        point += self.catching * 4
-        max_point += 20 * 4
-        point += self.agility * 3
+        point += self.strength
+        max_point += 20
+        point += self.catching * 3
         max_point += 20 * 3
-        point += self.strength * 2
+        point += self.agility * 2
         max_point += 20 * 2
-        point += self.footwork
+        point += self.footwork * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.vision
         max_point += 20
         self.wr_point = float(point) / max_point * 100
         return self.wr_point
@@ -333,18 +339,20 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.speed * 4
         max_point += 20 * 4
         point += self.strength * 4
         max_point += 20 * 4
-        point += self.catching * 2
+        point += self.catching * 3
+        max_point += 20 * 3
+        point += self.blocking * 3
+        max_point += 20 * 3
+        point += self.agility * 2
         max_point += 20 * 2
-        point += self.blocking * 2
+        point += self.positioning * 2
         max_point += 20 * 2
-        point += self.agility
-        max_point += 20
         self.te_point = float(point) / max_point * 100
         return self.te_point
 
@@ -352,15 +360,19 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.strength * 4
         max_point += 20 * 4
+        point += self.speed
+        max_point += 20
         point += self.blocking * 3
         max_point += 20 * 3
         point += self.footwork * 2
         max_point += 20 * 2
-        point += self.speed
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.agility
         max_point += 20
         self.ol_point = float(point) / max_point * 100
         return self.ol_point
@@ -369,17 +381,20 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.strength * 4
         max_point += 20 * 4
         point += self.tackling * 3
         max_point += 20 * 3
-        point += self.vision
-        point += self.positioning
-        point += self.agility
-        point += self.aggression
-        max_point += 80
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.agility * 2
+        max_point += 20 * 2
+        point += self.footwork
+        max_point += 20
         self.dl_point = float(point) / max_point * 100
         return self.dl_point
 
@@ -387,7 +402,7 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.strength * 4
         max_point += 20 * 4
@@ -395,12 +410,14 @@ class Player:
         max_point += 20 * 3
         point += self.tackling * 3
         max_point += 20 * 3
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
         point += self.agility * 2
         max_point += 20 * 2
-        point += self.vision
-        point += self.positioning
-        point += self.aggression
-        max_point += 60
+        point += self.footwork
+        max_point += 20
         self.de_point = float(point) / max_point * 100
         return self.de_point
 
@@ -408,21 +425,24 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.intelligence * 4
         max_point += 20 * 4
         point += self.strength * 4
         max_point += 20 * 4
-        point += self.speed * 3
-        max_point += 20 * 3
+        point += self.speed
+        max_point += 20
         point += self.tackling * 3
         max_point += 20 * 3
-        point += self.agility
-        point += self.vision
-        point += self.positioning
-        point += self.aggression
-        max_point += 80
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.agility * 2
+        max_point += 20 * 2
+        point += self.footwork
+        max_point += 20
         self.mlb_point = float(point) / max_point * 100
         return self.mlb_point
 
@@ -430,19 +450,22 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
-        point += self.speed * 4
+        point += self.strength * 4
         max_point += 20 * 4
-        point += self.strength * 3
+        point += self.speed * 3
         max_point += 20 * 3
         point += self.tackling * 3
         max_point += 20 * 3
-        point += self.agility
-        point += self.vision
-        point += self.positioning
-        point += self.aggression
-        max_point += 80
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.agility * 2
+        max_point += 20 * 2
+        point += self.footwork
+        max_point += 20
         self.olb_point = float(point) / max_point * 100
         return self.olb_point
 
@@ -450,20 +473,23 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.speed * 4
         max_point += 20 * 4
+        point += self.strength
+        max_point += 20
         point += self.tackling * 3
         max_point += 20 * 3
-        point += point + self.agility * 2
+        point += self.agility * 2
         max_point += 20 * 2
-        point += self.strength * 1.5
-        max_point += 20 * 1.5
-        point += self.vision
-        point += self.positioning
-        point += self.aggression
-        max_point += 60
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.footwork
+        point += self.catching
+        max_point += 40
         self.cb_point = float(point) / max_point * 100
         return self.cb_point
 
@@ -471,7 +497,7 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
         point += self.speed * 3
         max_point += 20 * 3
@@ -483,10 +509,12 @@ class Player:
         max_point += 20 * 3
         point += self.agility * 2
         max_point += 20 * 2
-        point += self.vision
-        point += self.positioning
-        point += self.aggression
-        max_point += 60
+        point += self.vision * 2
+        max_point += 20 * 2
+        point += self.positioning * 2
+        max_point += 20 * 2
+        point += self.footwork
+        max_point += 20
         self.sf_point = float(point) / max_point * 100
         return self.sf_point
 
@@ -494,14 +522,16 @@ class Player:
         point = 1
         max_point = 1
         if with_talent:
-            point += self.talent
+            point += self.talent * 4
             max_point += 20
-        point += self.kicking * 4
+        point += self.intelligence * 4
         max_point += 20 * 4
-        point += self.punting * 4
-        max_point += 20 * 4
-        point += self.consistency * 3
+        point += self.consistency * 4
         max_point += 20 * 3
+        point += self.kicking * 3
+        max_point += 20 * 4
+        point += self.punting * 3
+        max_point += 20 * 4
         point += self.strength
         max_point += 20
         self.k_point = float(point) / max_point * 100
