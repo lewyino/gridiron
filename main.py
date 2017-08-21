@@ -1,18 +1,33 @@
-import sys
 import getopt
 import getpass
-from parse_player_data_and_save_in_db import *
+import sys
+
 from calculate_best_player_position import *
-from get_player_with_potential import *
 from get_match_team import *
-import get_best_players_for_position
+from get_player_with_potential import *
+from parse_player_data_and_save_in_db import *
 
 login = None
 password = None
 
+allow_arguments = (
+    {
+        'name': 'parse',
+        'method': 'parse'
+    },
+    {
+        'name': 'calculate_position',
+        'method': 'calculate_position'
+    },
+    {
+        'name': 'potential_player',
+        'method': 'potential_player'
+    }
+)
+
 
 def get_error_msg(filename):
-    return 'use %s with param, allowed: parse, bp' % (filename,)
+    return 'use \'%s [args]\', allowed args: %s' % (filename, ', '.join(map(lambda p: p['name'], allow_arguments)))
 
 
 def print_help():
@@ -48,7 +63,20 @@ def potential_player(verbose: bool):
 
 
 def match_team(verbose: bool):
-    get_match_team(verbose)
+    formation = [
+        Formation('qb', 1),
+        Formation('wr', 1),
+        Formation('de', 2),
+        Formation('cb', 2),
+        Formation('te', 2),
+        Formation('olb', 2),
+        Formation('mlb', 1),
+        Formation('sf', 2),
+        Formation('ol', 5),
+        Formation('dl', 2),
+        Formation('rb', 2),
+    ]
+    get_match_team(formation, verbose)
 
 
 def parse_argv(argv):
@@ -75,21 +103,17 @@ def parse_argv(argv):
             password = arg
 
     for arg in args:
-        if arg == 'parse':
-            parse(verbose)
-            exit(0)
-        elif arg == 'calculate_position':
-            calculate_position(verbose)
-            exit(0)
-        elif arg == 'potential_player':
-            potential_player(verbose)
-            exit(0)
-        elif arg == 'match_team':
-            match_team(verbose)
-            exit(0)
+        for ap in allow_arguments:
+            if arg == ap['name']:
+                print('call \'%s\' method' % (arg,))
+                method = eval(ap['method'])
+                method(verbose)
+                exit(0)
+
 
 if __name__ == "__main__":
     parse_argv(sys.argv[1:])
+    print(get_error_msg(sys.argv[0]))
 
 
 # get_best_players_for_position('MLB', 10)

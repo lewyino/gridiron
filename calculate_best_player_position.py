@@ -1,5 +1,5 @@
 from db.PlayerSimpleDbConnect import PlayerSimpleDbConnect
-from site_parser.GridIronParser import *
+from model.Player import Player
 
 
 def calculate_best_player_position(
