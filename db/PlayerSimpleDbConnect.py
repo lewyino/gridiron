@@ -9,9 +9,10 @@ class PlayerSimpleDbConnect:
     __conn = None
     __cursor = None
 
-    def __init__(self, table_name: str = None):
+    def __init__(self, table_name: str = None, verbose: bool = True):
         if table_name is not None:
             self.__table_name = table_name
+        self.verbose = verbose
         self.create_connection()
 
     def create_connection(self):
@@ -20,7 +21,8 @@ class PlayerSimpleDbConnect:
             cursor = conn.cursor()
             cursor.execute('SELECT SQLITE_VERSION()')
             data = cursor.fetchone()
-            print("Database connected! SQLite version: %s" % data)
+            if self.verbose:
+                print("Database connected! SQLite version: %s" % data)
             query = 'CREATE TABLE IF NOT EXISTS %s ' \
                     '(id INT, name TEXT, bpos REAL, age INT, rating REAL, energy INT, wage TEXT, ' \
                     'health TEXT, experience REAL, talent REAL, teamChemistry REAL, ' \
@@ -31,7 +33,8 @@ class PlayerSimpleDbConnect:
                     'weight INT, height REAL, bmi REAL, ' \
                     'teamwork INT, consistency INT, weeksAtClub INT, ' \
                     'myBpos TEXT, qbPoint REAL, rbPoint REAL, wrPoint REAL, tePoint REAL, olPoint REAL, ' \
-                    'dlPoint REAL, dePoint REAL, mlbPoint REAL, olbPoint REAL, cbPoint REAL, sfPoint REAL, kPoint REAL)'\
+                    'dlPoint REAL, dePoint REAL, mlbPoint REAL, olbPoint REAL, cbPoint REAL, sfPoint REAL, kPoint REAL, ' \
+                    'lastUpdateWeek INT, current INT DEFAULT 0 NOT NULL, timestamp INT DEFAULT 0 NOT NULL)'\
                     % self.__table_name
             cursor.execute(query)
             self.__conn = conn
@@ -67,7 +70,8 @@ class PlayerSimpleDbConnect:
                           player.weight, player.height, player.bmi,
                           player.teamwork, player.consistency, player.weeks_at_club,
                           0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, player.last_update_week)
-        query = 'INSERT INTO %s VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)' % self.__table_name
+        tmp = 'strftime("%s","now")'
+        query = 'INSERT INTO %s VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,%s)' % (self.__table_name, tmp)
         try:
             self.__cursor.execute(query, player_as_tuple)
             return True
@@ -113,6 +117,11 @@ class PlayerSimpleDbConnect:
 
     def get_all_players(self):
         query = 'SELECT * FROM %s GROUP BY id' % self.__table_name
+        self.__cursor.execute(query)
+        return self.__cursor.fetchall()
+
+    def get_current_all_players(self):
+        query = 'SELECT * FROM %s WHERE current = 1 GROUP BY id' % self.__table_name
         self.__cursor.execute(query)
         return self.__cursor.fetchall()
 

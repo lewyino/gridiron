@@ -103,3 +103,4 @@ ENV/
 cookie.txt
 *.iml
 sqlite_database.db
+u21.json

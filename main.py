@@ -6,9 +6,15 @@ from calculate_best_player_position import *
 from get_match_team import *
 from get_player_with_potential import *
 from parse_player_data_and_save_in_db import *
+from stats.match_stats import *
+from stats.team_stats import *
+from u21.games import *
 
-login = None
-password = None
+app_opts = {
+    'login': None,
+    'password': None,
+    'm': None
+}
 
 allow_arguments = (
     {
@@ -22,6 +28,18 @@ allow_arguments = (
     {
         'name': 'potential_player',
         'method': 'potential_player'
+    },
+    {
+        'name': 'stats',
+        'method': 'stats'
+    },
+    {
+        'name': 'match_stats',
+        'method': 'match_stats'
+    },
+    {
+        'name': 'u21',
+        'method': 'u21'
     }
 )
 
@@ -35,13 +53,12 @@ def print_help():
 
 
 def parse(verbose: bool):
-    global login
-    global password
-    if login is None:
-        login = input("Grid Iron login: ")
-    if password is None:
-        password = getpass.getpass("Grid Iron password: ")
-    parse_player_data_and_save_in_db(login, password, verbose)
+    global app_opts
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    parse_player_data_and_save_in_db(app_opts['login'], app_opts['password'], verbose)
 
 
 def calculate_position(verbose: bool):
@@ -62,6 +79,23 @@ def potential_player(verbose: bool):
     get_player_with_potential(min_talent, min_teamwork, min_consistency, max_age, verbose)
 
 
+def stats(verbose: bool):
+    global app_opts
+    get_team_stats(app_opts['m'], verbose)
+
+
+def match_stats(verbose: bool):
+    global app_opts
+    match_id = int(input("Match id: "))
+    matches = get_matches_statistic((match_id,), verbose)
+    print(matches)
+
+
+def u21(verbose: bool):
+    global app_opts
+    make_all(verbose)
+
+
 def match_team(verbose: bool):
     formation = [
         Formation('qb', 1),
@@ -80,8 +114,9 @@ def match_team(verbose: bool):
 
 
 def parse_argv(argv):
+    global app_opts
     try:
-        opts, args = getopt.getopt(argv, "hvl:p:")
+        opts, args = getopt.getopt(argv, "hvl:p:m:")
     except getopt.GetoptError:
         sys.exit(2)
 
@@ -95,12 +130,12 @@ def parse_argv(argv):
             print('verbose')
             verbose = True
         elif opt == '-l':
-            global login
-            login = arg
-            print('You are login as: %s' % (login,))
+            app_opts['login'] = arg
+            print('You are login as: %s' % (app_opts['login'],))
         elif opt == '-p':
-            global password
-            password = arg
+            app_opts['password'] = arg
+        elif opt == '-m':
+            app_opts['m'] = int(arg)
 
     for arg in args:
         for ap in allow_arguments:
