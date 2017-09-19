@@ -1,9 +1,10 @@
-import io
+import time
 from typing import Tuple, List, Dict
 
-import pycurl
-
+from site_parser.GridIronLogin import GridIronLogin
+from site_parser.GridIronParser import GridIronParser
 from site_parser.MatchStatisticParser import MatchStatisticParser
+from site_parser.MatchTeamsParser import MatchTeamsParser
 
 
 def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
@@ -21,22 +22,29 @@ def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
         msp.get_teams_kicking()
         msp.get_teams_defense()
         matches.append(msp.get_result())
+        time.sleep(3)
     return matches
 
 
 def get_match_statistic_page(match_id: int, verbose: bool = False):
     if verbose:
         print('get match statistic for match_id: %d' % match_id)
-    c = pycurl.Curl()
-    c.setopt(c.URL, 'https://www.grid-iron.org/match/match_id/%d/action/boxscore' % match_id)
-    c.setopt(c.COOKIEFILE, 'cookie.txt')
-    buf = io.BytesIO()
-    c.setopt(c.WRITEDATA, buf)
-    c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
-    c.setopt(pycurl.SSL_VERIFYPEER, 0)
-    c.setopt(pycurl.SSL_VERIFYHOST, 0)
-    c.perform()
-    return buf.getvalue().decode('utf-8')
+    return GridIronLogin.get_match_statistic_site(match_id)
+
+
+def get_match_roster(match_id: int, verbose: bool = False):
+    roster_page = get_match_roster_page(match_id, verbose)
+    mtp = MatchTeamsParser(roster_page)
+    return {
+        'home_team_roster': mtp.get_home_team(),
+        'away_team_roster': mtp.get_away_team(),
+    }
+
+
+def get_match_roster_page(match_id: int, verbose: bool = False):
+    if verbose:
+        print('get match roster for match_id: %d' % match_id)
+    return GridIronLogin.get_match_teams_site(match_id)
 
 
 def get_best_passing(matches: List):
@@ -308,3 +316,22 @@ def get_match_stats(dict, field, fields, title = None, max_count = 9999):
             s += '%s, ' % str(tmp_d[f])
         result += s[:-2] + '\n'
     return result
+
+
+def enrich_roster_players_with_age(team_id: int, roster: List, login: str, password: str, verbose: bool):
+    players = __get_team_players(team_id, login, password, verbose)
+    for r in roster:
+        player = tuple(filter(lambda p: p.id == r['player_id'], players))
+        if len(player) > 0:
+            r['age'] = player[0].age
+    return roster
+
+
+def __get_team_players(team_id: int, login: str, password: str, verbose: bool):
+    if verbose:
+        print('get players for team_id: %d' % team_id)
+    site = GridIronLogin(login, password)
+    site.get_session()
+    players_list_page = site.get_players_list_page(team_id)
+    players = GridIronParser.get_players_list(players_list_page)
+    return players

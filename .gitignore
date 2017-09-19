@@ -104,3 +104,8 @@ cookie.txt
 *.iml
 sqlite_database.db
 u21.json
+data_forum_small.txt
+new_data_forum.txt
+u21_matches.txt
+players_o21.txt
+data_forum.txt

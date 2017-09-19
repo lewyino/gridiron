@@ -13,7 +13,7 @@ def load_data():
         return data
     except Exception as e:
         print(e)
-        raise None
+        return []
 
 
 def save_data(data: Dict):

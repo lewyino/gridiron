@@ -69,7 +69,8 @@ class GridIronLogin:
         c.perform()
         return buf.getvalue().decode('utf-8')
 
-    def get_match_statistic_site(self, match_id: int):
+    @staticmethod
+    def get_match_statistic_site(match_id: int):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/match/match_id/%d/action/boxscore' % match_id)
         c.setopt(c.COOKIEFILE, 'cookie.txt')
@@ -81,7 +82,8 @@ class GridIronLogin:
         c.perform()
         return buf.getvalue().decode('utf-8')
 
-    def get_match_teams_site(self, match_id: int):
+    @staticmethod
+    def get_match_teams_site(match_id: int):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/match/match_id/%d/action/stats' % match_id)
         c.setopt(c.COOKIEFILE, 'cookie.txt')

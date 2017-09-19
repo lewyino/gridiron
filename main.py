@@ -86,14 +86,29 @@ def stats(verbose: bool):
 
 def match_stats(verbose: bool):
     global app_opts
-    match_id = int(input("Match id: "))
-    matches = get_matches_statistic((match_id,), verbose)
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    match_ids = input("Match id: ")
+    matches = get_matches_statistic(tuple(map(lambda m: int(m), match_ids.split(','))), verbose)
+    for match in matches:
+        roster = get_match_roster(match['match_id'], verbose)
+        home_team = match['home_team']
+        away_team = match['away_team']
+        home_team['roster'] = roster['home_team_roster']
+        away_team['roster'] = roster['away_team_roster']
+        enrich_roster_players_with_age(home_team['id'], home_team['roster'], app_opts['login'], app_opts['password'], verbose)
     print(matches)
 
 
 def u21(verbose: bool):
     global app_opts
-    make_all(verbose)
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    make_all(app_opts['login'], app_opts['password'], verbose)
 
 
 def match_team(verbose: bool):

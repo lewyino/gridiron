@@ -254,6 +254,7 @@ class MatchStatisticParser:
         result_away_team.update(result['away_team'])
         return {
             'match_id': self.__result['match_id'],
+            'scoring': self.__result['scoring'] if 'home_team' in self.__result else [],
             'home_team': result_home_team,
             'away_team': result_away_team,
         }
