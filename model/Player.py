@@ -151,9 +151,19 @@ class Player:
         if player is not None:
             diff = self.__print_basic_data_difference(player)
             diff += self.get_skills_difference(player)
-            if diff is not None and len(diff) > 0 and verbose:
-                print('print player difference %s' % (self.name,))
-                print(diff)
+            if verbose:
+                if diff is not None and len(diff) > 0:
+                    print('print player difference %s' % (self.name,))
+                    print(diff)
+                else:
+                    last_update_week = self.last_update_week or 0
+                    print('print player last update week %s: %d (%d, current: %d)' %
+                          (
+                              self.name,
+                              last_update_week,
+                              (self.weeks_at_club - last_update_week),
+                              self.weeks_at_club)
+                          )
         else:
             if verbose:
                 print('new player')
