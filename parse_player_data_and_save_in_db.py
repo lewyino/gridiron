@@ -1,5 +1,5 @@
 from db.PlayerSimpleDbConnect import PlayerSimpleDbConnect
-from site_parser.GridIronLogin import GridIronLogin
+from site_parser.GridIronLoginUrllib import GridIronLoginUrllib as GridIronLogin
 from site_parser.GridIronParser import GridIronParser
 
 
