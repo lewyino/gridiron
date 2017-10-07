@@ -34,7 +34,8 @@ class PlayerSimpleDbConnect:
                     'teamwork INT, consistency INT, weeksAtClub INT, ' \
                     'myBpos TEXT, qbPoint REAL, rbPoint REAL, wrPoint REAL, tePoint REAL, olPoint REAL, ' \
                     'dlPoint REAL, dePoint REAL, mlbPoint REAL, olbPoint REAL, cbPoint REAL, sfPoint REAL, kPoint REAL, ' \
-                    'lastUpdateWeek INT, current INT DEFAULT 0 NOT NULL, timestamp INT DEFAULT 0 NOT NULL)'\
+                    'lastUpdateWeek INT, current INT DEFAULT 0 NOT NULL, timestamp INT DEFAULT 0 NOT NULL, ' \
+                    'trained TEXT, lastUpdateSkill TEXT)'\
                     % self.__table_name
             cursor.execute(query)
             self.__conn = conn
@@ -69,9 +70,9 @@ class PlayerSimpleDbConnect:
                           player.aggression, player.footwork, player.punting, player.stamina,
                           player.weight, player.height, player.bmi,
                           player.teamwork, player.consistency, player.weeks_at_club,
-                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, player.last_update_week)
+                          0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, player.last_update_week, player.trained, player.last_update_skill)
         tmp = 'strftime("%s","now")'
-        query = 'INSERT INTO %s VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,%s)' % (self.__table_name, tmp)
+        query = 'INSERT INTO %s VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,%s,?,?)' % (self.__table_name, tmp)
         try:
             self.__cursor.execute(query, player_as_tuple)
             return True

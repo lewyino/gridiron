@@ -44,7 +44,9 @@ class Player:
                'teamwork: %d\n' \
                'consistency: %d\n' \
                'weeks at club: %d\n' \
-               'last update week: %d' % \
+               'last update week: %d\n' \
+               'trained: %s\n' \
+               'last_update_skill: %s' % \
                (
                    self.id,
                    self.name,
@@ -64,7 +66,9 @@ class Player:
                    self.teamwork,
                    self.consistency,
                    self.weeks_at_club,
-                   self.last_update_week
+                   self.last_update_week,
+                   self.trained,
+                   self.last_update_skill
                )
 
     def __repr__(self):
@@ -145,17 +149,20 @@ class Player:
         player.consistency = tuple_data[31]
         player.weeks_at_club = tuple_data[32]
         player.last_update_week = tuple_data[33]
+        player.trained = tuple_data[34]
+        player.last_update_skill = tuple_data[35]
         return player
 
     def print_player_difference(self, player, verbose: bool = True):
         if player is not None:
             diff = self.__print_basic_data_difference(player)
-            diff += self.get_skills_difference(player)
+            skill_diff = self.get_skills_difference(player)
+            diff += skill_diff
             if verbose:
                 if diff is not None and len(diff) > 0:
-                    print('print player difference %s' % (self.name,))
+                    print('print player difference %s (trained: %s)' % (self.name, self.trained))
                     print(diff)
-                else:
+                if skill_diff is None or len(skill_diff) == 0:
                     last_update_week = self.last_update_week or 0
                     print('print player last update week %s: %d (%d, current: %d)' %
                           (

@@ -1,4 +1,5 @@
 import re
+
 from model.Player import *
 
 
@@ -89,6 +90,9 @@ class GridIronParser:
             elif re.search('player_data_wrapper', html) and counter == 3:
                 player.update_other_data(GridIronParser.__get_other_data_list(html))
                 counter += 1
+        trained = GridIronParser.__get_trained_data(player_page)
+        if trained and trained[0]:
+            player.trained = trained[0]
         player.last_update_week = player.weeks_at_club
         return player
 
@@ -119,4 +123,9 @@ class GridIronParser:
     @staticmethod
     def __get_other_data_list(html_to_parse):
         data = re.search(r'bold;">(\d+)[.\w\W]*bold;">(\d+)[.\w\W]*bold;">(\d+)[.\w\W]*', html_to_parse)
+        return data.groups()
+
+    @staticmethod
+    def __get_trained_data(html_to_parse):
+        data = re.search(r'id="pltrain"[.\w\W]*selected>(.*)</option>[.\w\W]*', html_to_parse)
         return data.groups()

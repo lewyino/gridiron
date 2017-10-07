@@ -91,8 +91,8 @@ class TestMatchParser(unittest.TestCase):
         Test is parser return score data
         """
         __score = {
-            'home_team': {'score': 84, 'quarter': [28, 14, 14, 28]},
-            'away_team': {'score': 0, 'quarter': [1, 2, 3, 4]}
+            'home_team': {'score': 84, 'quarter': [28, 14, 14, 28], 'score_lost': 0},
+            'away_team': {'score': 0, 'quarter': [1, 2, 3, 4], 'score_lost': 84}
         }
         f = open('test_match_statistic.txt', encoding="utf8")
         f_data = f.read()

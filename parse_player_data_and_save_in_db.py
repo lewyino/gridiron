@@ -21,6 +21,7 @@ def parse_player_data_and_save_in_db(login, password, verbose: bool = False):
             diff = p.get_skills_difference(prev_player_data)
             if diff is not None and len(diff) > 0:
                 p.last_update_week = p.weeks_at_club
+                p.last_update_skill = diff
             else:
                 p.last_update_week = prev_player_data.last_update_week
             p.print_player_difference(prev_player_data)

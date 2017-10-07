@@ -1,9 +1,9 @@
 import sys
 import unittest
 
-from site_parser.GridIronParser import *
-
 sys.path.append('../')
+
+from site_parser.GridIronParser import *
 
 
 class TestParser(unittest.TestCase):
@@ -58,7 +58,8 @@ class TestParser(unittest.TestCase):
         self.assertEqual(player.catching, 6)
         self.assertEqual(player.agility, 12)
         self.assertEqual(player.footwork, 14)
-        self.assertEqual(player.weeksAtClub, 1)
+        self.assertEqual(player.weeks_at_club, 1)
+        self.assertEqual(player.trained, 'Kondycja / Siła')
 
 
 if __name__ == '__main__':
