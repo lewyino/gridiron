@@ -24,10 +24,10 @@ class GridIronLoginUrllib:
         urllib.request.urlopen(req)
 
     def get_team_id(self):
-        url = 'https://www.grid-iron.org/'
+        url = 'https://www.grid-iron.org/club/none/Free-online-American-football-manager-game'
         req = urllib.request.Request(url=url)
         data = urllib.request.urlopen(req).read().decode('utf-8')
-        re_team_id = re.search(r'https://www.grid-iron.org/club/(\d+)', data)
+        re_team_id = re.search(r'https://www.grid-iron.org/club/players/team_id/(\d+)', data)
         team_id = int(re_team_id.groups()[0])
         print('get_team_id', team_id)
         self.__team_id = team_id
@@ -42,8 +42,8 @@ class GridIronLoginUrllib:
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return data
 
-    def get_player_site(self, player_id: int):
-        url = 'https://www.grid-iron.org/club/pldetails/team_id/4775/playerid/%d' % player_id
+    def get_player_site(self, team_id: int, player_id: int):
+        url = 'https://www.grid-iron.org/club/pldetails/team_id/%d/playerid/%d' % (team_id, player_id)
         req = urllib.request.Request(url=url)
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return data

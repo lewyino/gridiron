@@ -127,5 +127,5 @@ class GridIronParser:
 
     @staticmethod
     def __get_trained_data(html_to_parse):
-        data = re.search(r'id="pltrain"[.\w\W]*selected>(.*)</option>[.\w\W]*', html_to_parse)
+        data = re.search(r'id="pltrain"[.\w\W]*selected>(.*)</option>[.\w\W]*id="training_loading"[.\w\W]*', html_to_parse)
         return data.groups()
