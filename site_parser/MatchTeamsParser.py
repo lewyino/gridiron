@@ -17,8 +17,12 @@ class MatchTeamsParser:
 
     def __get_team(self, divs):
         team = []
+        i = 0
         for div in divs.find_all('div', class_=['player_row2_stats', 'player_row1_stats']):
+            i += 1
             position = div.find('div', class_='player_pos_stats').text
+            if i > 22:
+                position = '[S] ' + position
             player_div = div.find('div', class_='player_name_stats')
             player_id = int(player_div.a['href'].split('/')[-1])
             player_name = player_div.a.text

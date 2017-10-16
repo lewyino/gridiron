@@ -41,7 +41,8 @@ class TestMatchParser(unittest.TestCase):
             {'player_id': 1776545, 'player_name': 'Kamil Šmajda', 'position': 'QB', 'player_stars': 9},
             {'player_id': 1678249, 'player_name': 'Neil Boyle', 'position': 'FB/C', 'player_stars': 8},
             {'player_id': 2105889, 'player_name': 'Gordan Šimleša', 'position': 'DE/L', 'player_stars': 7},
-            {'player_id': 1791983, 'player_name': 'Vilmos Szőke', 'position': 'CB/R', 'player_stars': 8}
+            {'player_id': 1791983, 'player_name': 'Vilmos Szőke', 'position': 'CB/R', 'player_stars': 8},
+            {'player_id': 2227264, 'player_name': 'Alexej Lipták', 'position': '[S] CB/L', 'player_stars': 6}
         ]
         f = open('test_match_teams.txt', encoding="utf8")
         f_data = f.read()
