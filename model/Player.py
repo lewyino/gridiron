@@ -148,9 +148,9 @@ class Player:
         player.teamwork = tuple_data[30]
         player.consistency = tuple_data[31]
         player.weeks_at_club = tuple_data[32]
-        player.last_update_week = tuple_data[33]
-        player.trained = tuple_data[34]
-        player.last_update_skill = tuple_data[35]
+        player.last_update_week = tuple_data[46]
+        player.trained = tuple_data[49]
+        player.last_update_skill = tuple_data[50]
         return player
 
     def print_player_difference(self, player, verbose: bool = True):
