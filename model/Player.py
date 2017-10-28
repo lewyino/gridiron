@@ -167,8 +167,8 @@ class Player:
                     print('print player last update week %s: %d (%d, current: %d)' %
                           (
                               self.name,
-                              last_update_week,
                               (self.weeks_at_club - last_update_week),
+                              last_update_week,
                               self.weeks_at_club)
                           )
         else:

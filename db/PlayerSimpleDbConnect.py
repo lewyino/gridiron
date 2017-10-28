@@ -1,4 +1,5 @@
 import sqlite3
+from typing import Tuple
 
 from model.Formation import Formation
 from model.Player import *
@@ -251,5 +252,13 @@ class PlayerSimpleDbConnect:
                 'GROUP BY id ' \
                 'ORDER BY %s DESC' \
                 % (self.__table_name, skill, min_skill_value, skill)
+        self.__cursor.execute(query)
+        return self.__cursor.fetchall()
+
+    def set_not_current_players(self, players: Tuple[int]):
+        query = 'UPDATE %s ' \
+                'SET current = 0 ' \
+                'WHERE id NOT IN %r' \
+                % (self.__table_name, players)
         self.__cursor.execute(query)
         return self.__cursor.fetchall()

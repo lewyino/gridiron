@@ -30,5 +30,7 @@ def parse_player_data_and_save_in_db(login, password, verbose: bool = False):
         if verbose:
             print('player %s save: %r\n' % (p.name, player_save_result,))
 
+    db.set_not_current_players(tuple(map(lambda cp: cp.id, players)))
+
     if verbose:
         print('players after save: %d' % db.get_count_players_in_db())
