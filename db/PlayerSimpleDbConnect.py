@@ -261,4 +261,4 @@ class PlayerSimpleDbConnect:
                 'WHERE id NOT IN %r' \
                 % (self.__table_name, players)
         self.__cursor.execute(query)
-        return self.__cursor.fetchall()
+        return self.__conn.commit()
