@@ -1,7 +1,8 @@
+import main
+from community import db
 from stats.match_stats import *
-from u21 import db
 
-default_u21_matches_file = 'u21_matches.txt'
+default_u21_matches_file = main.app_opts['o'] + '/u21_matches.txt'
 
 
 def parse_unsaved_matches(original_match_ids: (Tuple, str) = default_u21_matches_file, login: str = '', password: str = '', verbose: bool = False):
@@ -43,10 +44,10 @@ def parse_unsaved_matches(original_match_ids: (Tuple, str) = default_u21_matches
     return matches
 
 
-def add_and_save_data(data: List, verbose: bool = False):
-    saved_data = db.load_data()
+def add_and_save_data(data: List, verbose: bool = False, db_file: str = None):
+    saved_data = db.load_data(db_file)
     saved_data.extend(data)
-    result = db.save_data(saved_data)
+    result = db.save_data(saved_data, db_file)
     if verbose:
         print('add_and_save_data: %r' % result)
     return result

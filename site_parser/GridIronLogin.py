@@ -3,11 +3,14 @@ import re
 
 import pycurl
 
+import main
+
 
 class GridIronLogin:
     __team_id = 0
     __login = ''
     __password = ''
+    __cookie_file = main.app_opts['o'] + '/cookie.txt'
 
     def __init__(self, login, password):
         self.__login = login
@@ -18,7 +21,7 @@ class GridIronLogin:
         c.setopt(c.URL, 'https://www.grid-iron.org/home')
         s = 'user=%s&pass=%s&action=login' % (self.__login, self.__password)
         c.setopt(c.POSTFIELDS, s)
-        c.setopt(c.COOKIEJAR, 'cookie.txt')
+        c.setopt(c.COOKIEJAR, GridIronLogin.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
@@ -29,7 +32,7 @@ class GridIronLogin:
     def get_team_id(self):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/club/none/Free-online-American-football-manager-game')
-        c.setopt(c.COOKIEFILE, 'cookie.txt')
+        c.setopt(c.COOKIEFILE, self.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
@@ -48,7 +51,7 @@ class GridIronLogin:
         print('get players list page for teamid: %d' % team_id)
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/club/players/team_id/%d' % team_id)
-        c.setopt(c.COOKIEFILE, 'cookie.txt')
+        c.setopt(c.COOKIEFILE, self.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
@@ -60,7 +63,7 @@ class GridIronLogin:
     def get_player_site(self, player_id: int):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/club/pldetails/team_id/4775/playerid/%d' % player_id)
-        c.setopt(c.COOKIEFILE, 'cookie.txt')
+        c.setopt(c.COOKIEFILE, self.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
@@ -73,7 +76,7 @@ class GridIronLogin:
     def get_match_statistic_site(match_id: int):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/match/match_id/%d/action/boxscore' % match_id)
-        c.setopt(c.COOKIEFILE, 'cookie.txt')
+        c.setopt(c.COOKIEFILE, GridIronLogin.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')
@@ -86,7 +89,7 @@ class GridIronLogin:
     def get_match_teams_site(match_id: int):
         c = pycurl.Curl()
         c.setopt(c.URL, 'https://www.grid-iron.org/match/match_id/%d/action/stats' % match_id)
-        c.setopt(c.COOKIEFILE, 'cookie.txt')
+        c.setopt(c.COOKIEFILE, GridIronLogin.__cookie_file)
         buf = io.BytesIO()
         c.setopt(c.WRITEDATA, buf)
         c.setopt(pycurl.DNS_SERVERS, '8.8.8.8')

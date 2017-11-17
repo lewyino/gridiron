@@ -3,17 +3,18 @@ import getpass
 import sys
 
 from calculate_best_player_position import *
+from community.games import *
 from get_match_team import *
 from get_player_with_potential import *
 from parse_player_data_and_save_in_db import *
 from stats.match_stats import *
 from stats.team_stats import *
-from u21.games import *
 
 app_opts = {
     'login': None,
     'password': None,
-    'm': None
+    'm': None,
+    'o': 'output'
 }
 
 allow_arguments = (
@@ -40,6 +41,10 @@ allow_arguments = (
     {
         'name': 'u21',
         'method': 'u21'
+    },
+    {
+        'name': 'pp',
+        'method': 'pp'
     }
 )
 
@@ -108,7 +113,21 @@ def u21(verbose: bool):
         app_opts['login'] = input("Grid Iron login: ")
     if app_opts['password'] is None:
         app_opts['password'] = getpass.getpass("Grid Iron password: ")
-    make_all(app_opts['login'], app_opts['password'], verbose)
+    make_all(app_opts['login'], app_opts['password'], 'u21', verbose)
+
+
+def pp(verbose: bool):
+    global app_opts
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    output = {
+        'new_data': True,
+        'all_data': True,
+        'mvp': True
+    }
+    make_output(app_opts['login'], app_opts['password'], 'pp', verbose, output)
 
 
 def match_team(verbose: bool):
@@ -151,6 +170,8 @@ def parse_argv(argv):
             app_opts['password'] = arg
         elif opt == '-m':
             app_opts['m'] = int(arg)
+        elif opt == '-o':
+            app_opts['o'] = arg
 
     for arg in args:
         for ap in allow_arguments:
