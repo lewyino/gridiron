@@ -61,3 +61,10 @@ class GridIronLoginUrllib:
         req = urllib.request.Request(url=url)
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return data
+
+    @staticmethod
+    def get_match_site(match_id: int):
+        url = 'https://www.grid-iron.org/match/match_id/%d' % match_id
+        req = urllib.request.Request(url=url)
+        data = urllib.request.urlopen(req).read().decode('utf-8')
+        return data

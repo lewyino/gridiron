@@ -3,6 +3,7 @@ from typing import Tuple, List, Dict
 
 from site_parser.GridIronLoginUrllib import GridIronLoginUrllib as GridIronLogin
 from site_parser.GridIronParser import GridIronParser
+from site_parser.MatchParser import MatchParser
 from site_parser.MatchStatisticParser import MatchStatisticParser
 from site_parser.MatchTeamsParser import MatchTeamsParser
 
@@ -10,8 +11,8 @@ from site_parser.MatchTeamsParser import MatchTeamsParser
 def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
     matches = []
     for match_id in match_ids:
-        page = get_match_statistic_page(match_id, verbose)
-        msp = MatchStatisticParser(match_id, page)
+        page_boxscore = get_match_boxscore_page(match_id, verbose)
+        msp = MatchStatisticParser(match_id, page_boxscore)
         msp.get_teams()
         msp.get_score()
         msp.get_scoring()
@@ -21,15 +22,25 @@ def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
         msp.get_teams_receiving()
         msp.get_teams_kicking()
         msp.get_teams_defense()
-        matches.append(msp.get_result())
+        result = msp.get_result()
+        page = get_match_page(match_id, verbose)
+        mp = MatchParser(page)
+        result['audience'] = mp.get_audience()
+        matches.append(result)
         time.sleep(3)
     return matches
 
 
-def get_match_statistic_page(match_id: int, verbose: bool = False):
+def get_match_boxscore_page(match_id: int, verbose: bool = False):
     if verbose:
         print('get match statistic for match_id: %d' % match_id)
     return GridIronLogin.get_match_statistic_site(match_id)
+
+
+def get_match_page(match_id: int, verbose: bool = False):
+    if verbose:
+        print('get match page for match_id: %d' % match_id)
+    return GridIronLogin.get_match_site(match_id)
 
 
 def get_match_roster(match_id: int, verbose: bool = False):
