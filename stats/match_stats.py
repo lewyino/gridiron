@@ -87,7 +87,7 @@ def __get_match_passing(team, passing: Dict):
         player['comp'] += passing_tmp['comp']
         player['yds'] += passing_tmp['yds']
         player['yds_a'] = float(player['yds']) / player['att']
-        player['pct'] = float(player['comp']) / player['att']
+        player['pct'] = (float(player['comp']) / player['att']) * 100
         player['lng'] = passing_tmp['lng'] if passing_tmp['lng'] > player['lng'] else player['lng']
     else:
         player = {
