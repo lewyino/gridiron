@@ -45,6 +45,10 @@ allow_arguments = (
     {
         'name': 'pp',
         'method': 'pp'
+    },
+    {
+        'name': 'my',
+        'method': 'my'
     }
 )
 
@@ -128,6 +132,29 @@ def pp(verbose: bool):
         'mvp': True
     }
     make_output(app_opts['login'], app_opts['password'], 'pp', verbose, output)
+
+
+def my(verbose: bool):
+    data = u21_db.load_data('output/pp.json')
+    round_1 = list(filter(lambda d: d['round'] == 1, data))
+    max_round_1 = max(map(lambda d: d['audience'], round_1))
+    max_round = [list(filter(lambda d: d['audience'] == max_round_1, round_1))[0]]
+    round_2 = list(filter(lambda d: d['round'] == 2, data))
+    max_round_2 = max(map(lambda d: d['audience'], round_2))
+    max_round.append(list(filter(lambda d: d['audience'] == max_round_2, round_2))[0])
+    round_3 = list(filter(lambda d: d['round'] == 3, data))
+    max_round_3 = max(map(lambda d: d['audience'], round_3))
+    max_round.append(list(filter(lambda d: d['audience'] == max_round_3, round_3))[0])
+    round_4 = list(filter(lambda d: d['round'] == 4, data))
+    max_round_4 = max(map(lambda d: d['audience'], round_4))
+    max_round.append(list(filter(lambda d: d['audience'] == max_round_4, round_4))[0])
+    for d in max_round:
+        print('%s - %s: %d' % (d['home_team']['name'], d['away_team']['name'], d['audience']))
+    print(data)
+
+    passing = get_best_passing(data)
+    print(passing)
+    print(get_match_stats(passing, 'pct', ['player_name', 'pct'], '[b]QB (procent kompletnych podań)[/b]', 5))
 
 
 def match_team(verbose: bool):
