@@ -175,9 +175,12 @@ def match_team(verbose: bool):
 
 
 def parse_argv(argv):
+    print(argv)
     global app_opts
     try:
-        opts, args = getopt.getopt(argv, "hvl:p:m:")
+        opts, args = getopt.getopt(argv, "hvl:p:m:o:")
+        print('opts', opts)
+        print('args', args)
     except getopt.GetoptError:
         sys.exit(2)
 
@@ -199,6 +202,9 @@ def parse_argv(argv):
             app_opts['m'] = int(arg)
         elif opt == '-o':
             app_opts['o'] = arg
+
+    print(opts)
+    print(app_opts)
 
     for arg in args:
         for ap in allow_arguments:
