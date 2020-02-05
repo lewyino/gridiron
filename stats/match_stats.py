@@ -26,6 +26,8 @@ def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
         page = get_match_page(match_id, verbose)
         mp = MatchParser(page)
         result['audience'] = mp.get_audience()
+        result['home_team']['downs'] = mp.get_team_evens(result['home_team']['name'])
+        result['away_team']['downs'] = mp.get_team_evens(result['away_team']['name'])
         matches.append(result)
         time.sleep(3)
     return matches
