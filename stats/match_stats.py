@@ -6,6 +6,7 @@ from site_parser.GridIronParser import GridIronParser
 from site_parser.MatchParser import MatchParser
 from site_parser.MatchStatisticParser import MatchStatisticParser
 from site_parser.MatchTeamsParser import MatchTeamsParser
+from site_parser.match_parser import get_teams_evens
 
 
 def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
@@ -26,9 +27,43 @@ def get_matches_statistic(match_ids: Tuple[int], verbose: bool = False):
         page = get_match_page(match_id, verbose)
         mp = MatchParser(page)
         result['audience'] = mp.get_audience()
+        result['home_team']['downs'] = mp.get_team_evens(result['home_team']['name'])
+        result['away_team']['downs'] = mp.get_team_evens(result['away_team']['name'])
         matches.append(result)
         time.sleep(3)
     return matches
+
+
+def get_teams_events(match_ids: Tuple[int], verbose: bool = False):
+    matches = {}
+    result = {}
+    percent = {}
+    for match_id in match_ids:
+        page = get_match_page(match_id, verbose)
+        teams = get_teams_evens(page, verbose)
+        for team, events in teams.items():
+            if verbose:
+                print('add "%s" events from match: %i' % (team, match_id))
+            if team not in matches:
+                matches[team] = {}
+            matches[team][match_id] = events
+    for team, team_result in matches.items():
+        events = {1: {}, 2: {}, 3: {}, 4: {}}
+        for match, match_result in team_result.items():
+            if verbose:
+                print('calculate team events for: %s, from match: %i' % (team, match))
+            for down, down_result in match_result.items():
+                for type, type_result in down_result.items():
+                    if type not in events[down]:
+                        events[down][type] = 0
+                    events[down][type] = events[down][type] + type_result
+        percent[team] = {1: {}, 2: {}, 3: {}, 4: {}}
+        for down, down_result in events.items():
+            down_count = sum(down_result.values())
+            for type, type_result in down_result.items():
+                percent[team][down][type] = '%.2f%%' % (float(type_result) / down_count * 100,)
+        result[team] = events
+    return percent, result, matches
 
 
 def get_match_boxscore_page(match_id: int, verbose: bool = False):

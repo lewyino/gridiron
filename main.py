@@ -39,6 +39,10 @@ allow_arguments = (
         'method': 'match_stats'
     },
     {
+        'name': 'teams_events',
+        'method': 'teams_events'
+    },
+    {
         'name': 'u21',
         'method': 'u21'
     },
@@ -109,6 +113,17 @@ def match_stats(verbose: bool):
         away_team['roster'] = roster['away_team_roster']
         enrich_roster_players_with_age(home_team['id'], home_team['roster'], app_opts['login'], app_opts['password'], verbose)
     print(matches)
+
+
+def teams_events(verbose: bool):
+    global app_opts
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    match_ids = input("Match id: ")
+    matches = get_teams_events(tuple(map(lambda m: int(m), match_ids.split(','))), verbose)
+    print(matches[0])
 
 
 def u21(verbose: bool):
