@@ -53,6 +53,10 @@ allow_arguments = (
     {
         'name': 'my',
         'method': 'my'
+    },
+    {
+        'name': 'team_events',
+        'method': 'team_events'
     }
 )
 
@@ -124,6 +128,16 @@ def teams_events(verbose: bool):
     match_ids = input("Match id: ")
     matches = get_teams_events(tuple(map(lambda m: int(m), match_ids.split(','))), verbose)
     print(matches[0])
+
+
+def team_events(verbose: bool):
+    global app_opts
+    if app_opts['login'] is None:
+        app_opts['login'] = input("Grid Iron login: ")
+    if app_opts['password'] is None:
+        app_opts['password'] = getpass.getpass("Grid Iron password: ")
+    team_id = input("Team id: ")
+    get_team_matches_stats(team_id, app_opts['login'], app_opts['password'], verbose)
 
 
 def u21(verbose: bool):
