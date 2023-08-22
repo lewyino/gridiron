@@ -17,7 +17,10 @@ def get_teams_evens(data_to_parse: str, verbose: bool = False):
             for event in events:
                 is_owner_switch_class = event.has_attr('class') and event['class'][0] == 'owner_switch'
                 if is_owner_switch_class:
-                    team = re.search(r'(\s+)(.+) (\d+:\d+)', event.string).groups()[1]
+                    time_team_line_parse = re.search(r'(\s+)(.+) (\d+:\d+)', event.string)
+                    if not time_team_line_parse:
+                        continue
+                    team = time_team_line_parse.groups()[1]
                     if verbose:
                         print('switch to "%s" team' % (team,))
                     if team not in teams:

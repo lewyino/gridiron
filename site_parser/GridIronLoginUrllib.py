@@ -4,6 +4,7 @@ import urllib.parse
 import urllib.request
 
 
+# TODO
 class GridIronLoginUrllib:
     __team_id = 0
     __login = ''
@@ -48,6 +49,12 @@ class GridIronLoginUrllib:
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return data
 
+    def get_match_archive_site(self, team_id: int):
+        url = 'https://www.grid-iron.org/club/marchive/%d' % team_id
+        req = urllib.request.Request(url=url)
+        data = urllib.request.urlopen(req).read().decode('utf-8')
+        return data
+
     @staticmethod
     def get_match_statistic_site(match_id: int):
         url = 'https://www.grid-iron.org/match/match_id/%d/action/boxscore' % match_id
@@ -68,3 +75,4 @@ class GridIronLoginUrllib:
         req = urllib.request.Request(url=url)
         data = urllib.request.urlopen(req).read().decode('utf-8')
         return data
+
