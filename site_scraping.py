@@ -22,7 +22,7 @@ __session.mount('https://', SslOldHttpAdapter())
 
 def get_site_session(login: str, password: str) -> Session:
     r = __session.get(SITE_CHECK)
-    club_name = get_club_name(r.text)
+    club_name = get_club_name(r.content.decode(r.apparent_encoding))
     if not club_name:
         __session.post(SITE_LOGIN, data={'user': login, 'pass': password, 'action': 'login'})
     return __session
