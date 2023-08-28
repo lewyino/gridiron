@@ -1,20 +1,13 @@
 
 class Player:
 
-    def __init__(self, _id: str | int,
-                 name: str,
-                 bpos: str,
-                 age: str | int,
-                 rating: str | float,
-                 energy: str | int,
-                 wage: str,
-                 health: str):
-        self.id = int(_id) if type(_id) == str else _id
-        self.name = " ".join(name.split())
+    def __init__(self, id, name, bpos, age, rating, energy, wage, health):
+        self.id = int(id)
+        self.name = name
         self.bpos = bpos
-        self.age = int(age) if type(age) == str else age
-        self.rating = float(rating) if type(rating) == str else rating
-        self.energy = int(energy) if type(energy) == str else energy
+        self.age = age
+        self.rating = rating
+        self.energy = energy
         self.wage = int(str(wage).replace(',', ''))
         self.health = health
 
@@ -33,14 +26,50 @@ class Player:
                 return 0
 
     def __str__(self):
-        return f'id: {self.id}\n' \
-               f'name: {self.name}\n' \
-               f'bpos: {self.bpos}\n' \
-               f'age: {self.age}\n' \
-               f'rating: {self.rating}*\n' \
-               f'energy: {self.energy}%\n' \
-               f'wage: {self.wage}$\n' \
-               f'health: {self.health}\n'
+        return 'id: %d\n' \
+               'name: %s\n' \
+               'bpos: %s\n' \
+               'age: %d\n' \
+               'rating: %.1f*\n' \
+               'energy: %d%%\n' \
+               'wage: %d$\n' \
+               'health: %s\n' \
+               'experience: %.1f*\n' \
+               'talent: %.1f*\n' \
+               'teamChemistry: %.1f*\n' \
+               'skills: %s\n' \
+               'weight: %d\n' \
+               'height: %d\n' \
+               'bmi: %.1f\n' \
+               'teamwork: %d\n' \
+               'consistency: %d\n' \
+               'weeks at club: %d\n' \
+               'last update week: %d\n' \
+               'trained: %s\n' \
+               'last_update_skill: %s' % \
+               (
+                   self.id,
+                   self.name,
+                   self.bpos,
+                   self.age,
+                   self.rating,
+                   self.energy,
+                   self.wage,
+                   self.health,
+                   self.experience,
+                   self.talent,
+                   self.teamChemistry,
+                   self.skills_list,
+                   self.weight,
+                   self.height,
+                   self.bmi,
+                   self.teamwork,
+                   self.consistency,
+                   self.weeks_at_club,
+                   self.last_update_week,
+                   self.trained,
+                   self.last_update_skill
+               )
 
     def __repr__(self):
         return self.__str__()
