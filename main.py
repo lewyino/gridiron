@@ -6,14 +6,11 @@ from calculate_best_player_position import *
 from get_match_team import *
 from get_player_with_potential import *
 from parse_player_data_and_save_in_db import *
+from parse_team_data import get_data
 from stats.match_stats import *
 from stats.team_stats import *
 
 # allow_methods = (
-#     {
-#         'name': 'parse_team_data',
-#         'method': 'parse_team_data'
-#     },
 #     {
 #         'name': 'calculate_position',
 #         'method': 'calculate_position'
@@ -33,16 +30,13 @@ from stats.team_stats import *
 #     {
 #         'name': 'teams_events',
 #         'method': 'teams_events'
-#     },
-#     {
-#         'name': 'team_events',
-#         'method': 'team_events'
 #     }
 # )
 
 
 def parse_team_data(verbose: bool, _config: Dict):
-    parse_player_data_and_save_in_db(_config['login'], _config['password'], verbose)
+    get_data(_config['login'], _config['password'])
+    # parse_player_data_and_save_in_db(_config['login'], _config['password'], _config['verbose'])
 
 
 def calculate_position(verbose: bool):
@@ -132,14 +126,15 @@ def parse_argv_argparse() -> Dict:
     return vars(args)
 
 
-def validate_config_and_get_necessary_data(_config: Dict) -> (int, Dict[str, Any]):
+def validate_config_and_get_necessary_data(_config: Dict) -> Tuple[int, str | Dict]:
     if _config['method'] not in allow_methods.keys():
         return 1, f'method "{_config["method"]}" is not available'
     if not _config['login']:
         _config['login'] = input('GridIron username: ')
     if not _config['password']:
         _config['password'] = getpass.getpass("GridIron password: ")
-    print(f'call "{_config["method"]}" method')
+    if _config['verbose']:
+        print(f'call "{_config["method"]}" method')
     return 0, _config
 
 
@@ -149,7 +144,5 @@ if __name__ == "__main__":
     if code != 0:
         print(config)
         exit(code)
-    print(config)
-    print(allow_methods[config['method']])
     to_run = allow_methods[config['method']]
     to_run(config['verbose'], config)
