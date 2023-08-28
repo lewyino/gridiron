@@ -3,7 +3,7 @@ import os
 
 
 def test_get_club_name():
-    __result = 'Unknow Team'
+    __result = 'Unknown Team'
     f = open(f'{os.path.dirname(__file__)}/club.html', 'r')
     club_site_data = f.read()
     f.close()
