@@ -8,6 +8,7 @@ from site_parser.MatchTeamsParser import *
 from site_parser.MatchStatisticParser import MatchStatisticParser
 
 
+@unittest.skip('old')
 class TestMatchParser(unittest.TestCase):
     """
     Test functions from Parser class

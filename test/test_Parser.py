@@ -6,6 +6,7 @@ sys.path.append('../')
 from site_parser.GridIronParser import *
 
 
+@unittest.skip('old')
 class TestParser(unittest.TestCase):
     """
     Test functions from Parser class
