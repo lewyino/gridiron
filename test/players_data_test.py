@@ -53,7 +53,8 @@ def test_get_player_data():
         'weeks_at_club': 2,
         'bmi': 29.0,
         'height': 185.0,
-        'weight': 100.0
+        'weight': 100.0,
+        'current_training': ('strength', 5, 3)
     }
     f = open(f'{os.path.dirname(__file__)}/player.html', 'r')
     player_site_data = f.read()

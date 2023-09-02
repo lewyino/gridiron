@@ -71,6 +71,13 @@ def __get_player_data_body(player_profile: Tag) -> Dict[str, float]:
     return body
 
 
+def __get_player_data_current_training(pltrain: Tag) -> tuple[str, int, int]:
+    selected = pltrain.find('option', attrs={'selected': True})
+    value_text = selected.text.split('/')[1].strip().lower()
+    value = selected.get('value').split('|')
+    return value_text, int(value[0]), int(value[1])
+
+
 def get_player_data(page: str) -> TeamPlayer:
     soup = BeautifulSoup(page, 'html5lib')
     basic_info_top = soup.find('div', attrs={'class': 'player_basic_info_top'})
@@ -85,5 +92,7 @@ def get_player_data(page: str) -> TeamPlayer:
         setattr(player, skill_name, skill_value)
     for body_name, body_value in __get_player_data_body(player_profile).items():
         setattr(player, body_name, body_value)
+    pltrain = soup.find('select', attrs={'id': 'pltrain'})
+    player.current_training = __get_player_data_current_training(pltrain)
     return player
 
