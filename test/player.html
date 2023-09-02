@@ -1,0 +1,2158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE8"/>
+    <title>GridIron - Free online American football manager game</title>
+    <meta name="KeyWords"
+          content="football, american football, american football game, gridiron, online game, browser game, american football manager, online american football manager game"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Copyright" content="Copyright 2008-2023 Melderon Games"/>
+    <meta name="revisit-after" content="15 days"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="Rating" content="General"/>
+    <meta name="Robots" content="All"/>
+    <meta name="description" content="Online American football manager game"/>
+    <link rel="icon" type="image/png" href="https://www.grid-iron.org/favicon.png"/>
+    <link href="https://www.grid-iron.org/css/main2013.css?rnd=6582" rel="stylesheet" type="text/css"/>
+    <link href="https://www.grid-iron.org/css/add_seo.css?rnd=1215" rel="stylesheet" type="text/css"/>
+
+
+    <script type="text/javascript">
+        var date_format = "28.08.2023";
+    </script>
+    <script type="text/javascript">
+        var SERVER_URL = 'https://www.grid-iron.org';
+        var preloadFlag = false;
+        var currenttime = 'August 28, 2023 14:17:06';
+
+        function setupTimer() {
+            setInterval("displaytime()", 1000);
+        }
+    </script>
+    <!-- <script type="text/javascript" src="https://www.grid-iron.org/js/config.js?rnd=869"></script> -->
+    <script type="text/javascript" src="https://www.grid-iron.org/js/giclock.js?rnd=256"></script>
+
+    <script src="https://www.grid-iron.org/js/jquery-1.9.1.min.js"></script>
+    <script src="https://www.grid-iron.org/js/opentip-jquery-excanvas.js"></script>
+    <link href="https://www.grid-iron.org/css/opentip.css" rel="stylesheet" type="text/css"/>
+    <script src="https://www.grid-iron.org/js/main.js?rnd=326"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+            createTips("Notebook", "Bookmarks",
+                "Your division - table", "Search",
+                "Settings", "Transfers");
+            createIconTip('Logout', 'logout_button');
+            createIconTip('Club', 'club');
+            createIconTip('Players', 'players_on');
+            createIconTip('Staff', 'staff');
+            createIconTip('Training', 'training');
+            createIconTip('Nutrition centre', 'nutcentre');
+            createIconTip('Youth players', 'youth');
+            createIconTip('Economy', 'economy');
+            createIconTip('Challenges', 'challenges');
+            createIconTip('Construction', 'construction');
+        });
+    </script>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-62812421-3', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+<body onload="setupTimer()">
+<div id="top_container">
+    <div id="header_container2">
+        <div id="cur_language" onmouseover="langFlagOver()" onmouseout="langFlagOut()" onclick="toggleLanguageBox()">
+            <img src="https://www.grid-iron.org/images/basic_elements/languages/eng.png" width="25" height="25"
+                 border="0" alt="Grid-Iron american football game language selector"/>
+        </div>
+        <div id="lang_arrow" onmouseover="langFlagOver()" onmouseout="langFlagOut()" class="selector_arrow"
+             onclick="toggleLanguageBox()"></div>
+        <div id="servertime"></div>
+        <div id="language_box">
+            <div id="lang_box_header">Language</div>
+            <div id="lang_close" onclick="toggleLanguageBox()"></div>
+            <table cellspacing="1" cellpadding="1" border="0" style="margin: 2px;">
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/cze/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/cze.png)">
+                        Čeština
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/dan/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/dan.png)">
+                        Dansk
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/deu/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/deu.png)">
+                        Deutsch
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/eng/Free online American football manager game'"
+                        class="lang_box_selected"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/eng.png)">
+                        English
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/esp/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/esp.png)">
+                        Español
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/esl/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/esl.png)">
+                        Español (Latinoamérica)
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/fra/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/fra.png)">
+                        Français
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/ita/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/ita.png)">
+                        Italiano
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/hun/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/hun.png)">
+                        Magyar
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/ned/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/ned.png)">
+                        Nederlands
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/pol/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/pol.png)">
+                        Polski
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/bra/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/bra.png)">
+                        Português (Brasil)
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/rom/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/rom.png)">
+                        Română
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/svk/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/svk.png)">
+                        Slovenčina
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/slo/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/slo.png)">
+                        Slovenščina
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/ser/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/ser.png)">
+                        Srpski
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/fin/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/fin.png)">
+                        Suomi
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/bul/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/bul.png)">
+                        Български
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/rus/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/rus.png)">
+                        Русский
+                    </td>
+                    <td onclick="document.location.href='https://www.grid-iron.org/home/language/ukr/Free online American football manager game'"
+                        class="lang_box"
+                        style="background-image: url(https://www.grid-iron.org/images/basic_elements/languages/ukr.png)">
+                        Українська
+                    </td>
+                    <td class="lang_box_empty">&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+        <div id="gi_logo"
+             onclick="document.location.href='https://www.grid-iron.org/home/none/Free-online-American-football-manager-game'"></div>
+        <div id="notes" class="notes_ico"
+             onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+        <div id="bookmarks" class="bookmarks_ico"
+             onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+        <div id="tables" class="tables_ico"
+             onclick="document.location.href='https://www.grid-iron.org/home/competitions'"></div>
+        <div id="search" class="search_ico"
+             onclick="document.location.href='https://www.grid-iron.org/tools/search'"></div>
+        <div id="settings" class="settings_ico"
+             onclick="document.location.href='https://www.grid-iron.org/tools/settings'"></div>
+        <div id="transfers" class="transfers_ico"
+             onclick="document.location.href='https://www.grid-iron.org/tools'"></div>
+        <div id="header_teamname_box">
+            <div id="header_teamname_country">
+                <div id="header_teamname_flag"><img src="https://www.grid-iron.org/images/flags/byid/png/26.png"
+                                                    width="28" height="16" border="0" alt=""/></div>
+            </div>
+            <div id="header_teamname_tile">&nbsp;&nbsp;Unknown Team</div>
+            <div id="header_teamname_right"></div>
+        </div>
+        <form name="logout_form" id="logout_form-id"
+              action="https://www.grid-iron.org/home/none/Free-online-American-football-manager-game" method="post">
+            <input type="hidden" name="action" value="logout"/>
+            <div id="logout_button" onclick="document.getElementById('logout_form-id').submit()"></div>
+        </form>
+        <div id="mainmenu_container">
+            <div class="menu_button"
+                 onclick="document.location.href='https://www.grid-iron.org/home/none/Free-online-American-football-manager-game'">
+                <div class="menu_button_off_left" id="home_id_l"
+                     onmouseover="highlightButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))"
+                     onmouseout="dimButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))"></div>
+                <div class="menu_button_off_tile" id="home_id_t"
+                     onmouseover="highlightButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))"
+                     onmouseout="dimButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))">
+                    <a style="text-decoration: none;"
+                       href="https://www.grid-iron.org/home/none/Free-online-American-football-manager-game">Home</a>
+                </div>
+                <div class="menu_button_off_right" id="home_id_r"
+                     onmouseover="highlightButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))"
+                     onmouseout="dimButton(getElementById('home_id_l'), getElementById('home_id_t'), getElementById('home_id_r'))"></div>
+            </div>
+
+            <div class="menu_button"
+                 onclick="document.location.href='https://www.grid-iron.org/club/none/Free-online-American-football-manager-game'">
+                <div class="menu_button_left"></div>
+                <div class="menu_button_tile"><a style="text-decoration: none;"
+                                                 href="https://www.grid-iron.org/club/none/Free-online-American-football-manager-game">Club</a>
+                </div>
+                <div class="menu_button_right"></div>
+            </div>
+            <div class="menu_button"
+                 onclick="document.location.href='https://www.grid-iron.org/messages/none/Free-online-American-football-manager-game'">
+                <div class="menu_button_off_left" id="msg_id_l"
+                     onmouseover="highlightButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))"
+                     onmouseout="dimButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))"></div>
+                <div class="menu_button_off_tile" id="msg_id_t"
+                     onmouseover="highlightButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))"
+                     onmouseout="dimButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))">
+                    <a style="text-decoration: none;"
+                       href="https://www.grid-iron.org/messages/none/Free-online-American-football-manager-game">Messages</a>
+                </div>
+                <div class="menu_button_off_right" id="msg_id_r"
+                     onmouseover="highlightButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))"
+                     onmouseout="dimButton(getElementById('msg_id_l'), getElementById('msg_id_t'), getElementById('msg_id_r'))"></div>
+            </div>
+
+            <div class="menu_button"
+                 onclick="document.location.href='https://www.grid-iron.org/community/forum/0/Discuss-game-and-american-football-in-general'">
+                <div class="menu_button_off_left" id="comm_id_l"
+                     onmouseover="highlightButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))"
+                     onmouseout="dimButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))"></div>
+                <div class="menu_button_off_tile" id="comm_id_t"
+                     onmouseover="highlightButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))"
+                     onmouseout="dimButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))">
+                    <a style="text-decoration: none;"
+                       href="https://www.grid-iron.org/community/forum/0/Discuss-game-and-american-football-in-general">Community</a>
+                </div>
+                <div class="menu_button_off_right" id="comm_id_r"
+                     onmouseover="highlightButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))"
+                     onmouseout="dimButton(getElementById('comm_id_l'), getElementById('comm_id_t'), getElementById('comm_id_r'))"></div>
+            </div>
+            <div class="menu_button"
+                 onclick="document.location.href='https://www.grid-iron.org/nt/none/Grid-iron-American-football-manager-game-free-registration'">
+                <div class="menu_button_off_left" id="nt_id_l"
+                     onmouseover="highlightButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))"
+                     onmouseout="dimButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))"></div>
+                <div class="menu_button_off_tile" id="nt_id_t"
+                     onmouseover="highlightButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))"
+                     onmouseout="dimButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))">
+                    <a style="text-decoration: none;"
+                       href="https://www.grid-iron.org/nt/none/Grid-iron-American-football-manager-game-free-registration">National
+                        Teams</a></div>
+                <div class="menu_button_off_right" id="nt_id_r"
+                     onmouseover="highlightButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))"
+                     onmouseout="dimButton(getElementById('nt_id_l'), getElementById('nt_id_t'), getElementById('nt_id_r'))"></div>
+            </div>
+        </div>
+        <div id="icons_container">
+            <div id="club" onclick="document.location.href='https://www.grid-iron.org/club/12345'"></div>
+            <div class="divider1"></div>
+            <div id="players_on"
+                 onclick="document.location.href='https://www.grid-iron.org/club/players/team_id/12345'"></div>
+            <div class="divider1"></div>
+            <div id="staff" onclick="document.location.href='https://www.grid-iron.org/club/staff'"></div>
+            <div class="divider1"></div>
+            <div id="training" onclick="document.location.href='https://www.grid-iron.org/club/training'"></div>
+            <div class="divider1"></div>
+            <div id="nutcentre" onclick="document.location.href='https://www.grid-iron.org/club/nutcentre'"></div>
+            <div class="divider1"></div>
+            <div id="youth" onclick="document.location.href='https://www.grid-iron.org/club/youth'"></div>
+            <div class="divider1"></div>
+            <div id="economy" onclick="document.location.href='https://www.grid-iron.org/club/economy'"></div>
+            <div class="divider1"></div>
+            <div id="challenges" onclick="document.location.href='https://www.grid-iron.org/club/challenges'"></div>
+            <div class="divider1"></div>
+            <div id="construction" onclick="document.location.href='https://www.grid-iron.org/club/construction'"></div>
+        </div>
+    </div>
+
+    <div id="content_container">
+        <div class="top_ad" style="margin: top: 10px; margin-bottom: 15px;">
+            <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-2627020779821852";
+            /* Big Horizontal */
+            google_ad_slot = "8802635410";
+            google_ad_width = 728;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+                    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div>
+        <div class="top_ad_info"><a href="https://www.grid-iron.org/store/supporter">Click here, support the game and
+            <b>get rid of ads</b> for only <b>5 cents per day!</b></a></div>
+        <div class="fixall"></div>
+        <div id="content">
+            <link href="https://www.grid-iron.org/css/club.css?rnd=5213124" rel="stylesheet" type="text/css"/>
+            <link href="https://www.grid-iron.org/css/tools.css" rel="stylesheet" type="text/css"/>
+
+            <script type="text/javascript" src="https://www.grid-iron.org/js/player_details.js"></script>
+            <script type="text/javascript" src="https://www.grid-iron.org/js/compare.js"></script>
+            <script type="text/javascript" src="https://www.grid-iron.org/js/nt.js"></script>
+            <script type="text/javascript" src="https://www.grid-iron.org/ajax/training.js?rnd=5463"></script>
+            <script type="text/javascript" src="https://www.grid-iron.org/ajax/statshistory.js"></script>
+
+            <script type="text/javascript">
+                function do_change_training(plid) {
+                    param = document.getElementById('pltrain').value;
+                    change_training(plid, '' + param);
+                }
+
+                function change_stats_season() {
+                    newseason = document.getElementById('history').value;
+                    changeStatsSeason(123456, newseason);
+                }
+
+                function switchNr() {
+                    $("#nrpanel").toggle(350);
+                }
+            </script>
+
+            <div class="fixall"></div>
+            <div class="tabs_wrapper" style="margin-left: 8px; margin-top: 4px;">
+                <div class="tab_row_start"></div>
+                <div class="tab_row_fill">
+                    <div class="tab_wrapper" onclick="showProfile()">
+                        <div id="pro_on_left" class="tab_on_left"></div>
+                        <div id="pro_on_tile" class="tab_on_tile">Profile</div>
+                        <div id="pro_on_right" class="tab_on_right"></div>
+                        <div id="pro_off_left" class="tab_off_left" style="display: none;"></div>
+                        <div id="pro_off_tile" class="tab_off_tile" style="display: none;">Profile</div>
+                        <div id="pro_off_right" class="tab_off_right" style="display: none;"></div>
+                    </div>
+                    <div class="tab_wrapper" style="margin-left: 15px;" onclick="showPositions()">
+                        <div id="pos_on_left" class="tab_on_left" style="display: none;"></div>
+                        <div id="pos_on_tile" class="tab_on_tile" style="display: none;">Positions</div>
+                        <div id="pos_on_right" class="tab_on_right" style="display: none;"></div>
+                        <div id="pos_off_left" class="tab_off_left"></div>
+                        <div id="pos_off_tile" class="tab_off_tile">Positions</div>
+                        <div id="pos_off_right" class="tab_off_right"></div>
+                    </div>
+                    <div class="tab_wrapper" style="margin-left: 15px;" onclick="showStats()">
+                        <div id="sta_on_left" class="tab_on_left" style="display: none;"></div>
+                        <div id="sta_on_tile" class="tab_on_tile" style="display: none;">Stats</div>
+                        <div id="sta_on_right" class="tab_on_right" style="display: none;"></div>
+                        <div id="sta_off_left" class="tab_off_left"></div>
+                        <div id="sta_off_tile" class="tab_off_tile">Stats</div>
+                        <div id="sta_off_right" class="tab_off_right"></div>
+                    </div>
+                    <div class="tab_wrapper" style="margin-left: 15px;"
+                         onclick="document.location.href='https://www.grid-iron.org/store/supporter'">
+                        <div id="tra_on_left" class="tab_on_left" style="display: none;"></div>
+                        <div id="tra_on_tile" class="tab_on_tile" style="display: none;">Training details</div>
+                        <div id="tra_on_right" class="tab_on_right" style="display: none;"></div>
+                        <div id="tra_off_left" class="tab_off_left"></div>
+                        <div id="tra_off_tile" class="tab_off_tile">Training details
+                            <div id="supporter_small" style="float: right; margin-left: 2px;"></div>
+                        </div>
+                        <div id="tra_off_right" class="tab_off_right"></div>
+                    </div>
+                </div>
+                <div class="tab_row_end"></div>
+            </div>
+
+            <div class="subheader_wrapper_narrow">
+                <div class="subheader_left_narrow"></div>
+                <div class="subheader_tile_narrow" style="width: 972px;"></div>
+                <div class="subheader_right_narrow"></div>
+            </div>
+
+            <div class="player_info_wrapper">
+                <div id="nrpanel"
+                     style="display: none; left: 90px; background-color: rgba(200, 200, 200, 0.95); border: 2px solid #000088; border-radius: 4px; width: 710px; height: 330px; position: absolute; z-index: 99999; margin-top: 70px;">
+                    <table cellspacing="2" cellpadding="2" border="0">
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/1"><img
+                                        src="https://www.grid-iron.org/images/players/j/k1.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/2"><img
+                                        src="https://www.grid-iron.org/images/players/j/k2.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/3"><img
+                                        src="https://www.grid-iron.org/images/players/j/k3.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/4"><img
+                                        src="https://www.grid-iron.org/images/players/j/k4.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/5"><img
+                                        src="https://www.grid-iron.org/images/players/j/k5.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/6"><img
+                                        src="https://www.grid-iron.org/images/players/j/k6.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/7"><img
+                                        src="https://www.grid-iron.org/images/players/j/k7.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/8"><img
+                                        src="https://www.grid-iron.org/images/players/j/k8.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/9"><img
+                                        src="https://www.grid-iron.org/images/players/j/k9.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/10"><img
+                                        src="https://www.grid-iron.org/images/players/j/k10.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/11"><img
+                                        src="https://www.grid-iron.org/images/players/j/k11.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/12"><img
+                                        src="https://www.grid-iron.org/images/players/j/k12.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/13"><img
+                                        src="https://www.grid-iron.org/images/players/j/k13.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/14"><img
+                                        src="https://www.grid-iron.org/images/players/j/k14.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/15"><img
+                                        src="https://www.grid-iron.org/images/players/j/k15.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/16"><img
+                                        src="https://www.grid-iron.org/images/players/j/k16.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/17"><img
+                                        src="https://www.grid-iron.org/images/players/j/k17.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/18"><img
+                                        src="https://www.grid-iron.org/images/players/j/k18.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/19"><img
+                                        src="https://www.grid-iron.org/images/players/j/k19.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/20"><img
+                                        src="https://www.grid-iron.org/images/players/j/k20.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/21"><img
+                                        src="https://www.grid-iron.org/images/players/j/k21.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/22"><img
+                                        src="https://www.grid-iron.org/images/players/j/k22.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/23"><img
+                                        src="https://www.grid-iron.org/images/players/j/k23.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/24"><img
+                                        src="https://www.grid-iron.org/images/players/j/k24.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/25"><img
+                                        src="https://www.grid-iron.org/images/players/j/k25.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/26"><img
+                                        src="https://www.grid-iron.org/images/players/j/k26.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/27"><img
+                                        src="https://www.grid-iron.org/images/players/j/k27.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/28"><img
+                                        src="https://www.grid-iron.org/images/players/j/k28.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/29"><img
+                                        src="https://www.grid-iron.org/images/players/j/k29.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/30"><img
+                                        src="https://www.grid-iron.org/images/players/j/k30.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/31"><img
+                                        src="https://www.grid-iron.org/images/players/j/k31.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/32"><img
+                                        src="https://www.grid-iron.org/images/players/j/k32.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/33"><img
+                                        src="https://www.grid-iron.org/images/players/j/k33.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/34"><img
+                                        src="https://www.grid-iron.org/images/players/j/k34.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/35"><img
+                                        src="https://www.grid-iron.org/images/players/j/k35.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/36"><img
+                                        src="https://www.grid-iron.org/images/players/j/k36.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/37"><img
+                                        src="https://www.grid-iron.org/images/players/j/k37.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/38"><img
+                                        src="https://www.grid-iron.org/images/players/j/k38.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/39"><img
+                                        src="https://www.grid-iron.org/images/players/j/k39.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/40"><img
+                                        src="https://www.grid-iron.org/images/players/j/k40.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/41"><img
+                                        src="https://www.grid-iron.org/images/players/j/k41.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/42"><img
+                                        src="https://www.grid-iron.org/images/players/j/k42.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/43"><img
+                                        src="https://www.grid-iron.org/images/players/j/k43.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/44"><img
+                                        src="https://www.grid-iron.org/images/players/j/k44.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/45"><img
+                                        src="https://www.grid-iron.org/images/players/j/k45.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/46"><img
+                                        src="https://www.grid-iron.org/images/players/j/k46.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/47"><img
+                                        src="https://www.grid-iron.org/images/players/j/k47.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/48"><img
+                                        src="https://www.grid-iron.org/images/players/j/k48.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/49"><img
+                                        src="https://www.grid-iron.org/images/players/j/k49.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/50"><img
+                                        src="https://www.grid-iron.org/images/players/j/k50.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/51"><img
+                                        src="https://www.grid-iron.org/images/players/j/k51.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/52"><img
+                                        src="https://www.grid-iron.org/images/players/j/k52.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/53"><img
+                                        src="https://www.grid-iron.org/images/players/j/k53.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/54"><img
+                                        src="https://www.grid-iron.org/images/players/j/k54.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/55"><img
+                                        src="https://www.grid-iron.org/images/players/j/k55.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/56"><img
+                                        src="https://www.grid-iron.org/images/players/j/k56.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/57"><img
+                                        src="https://www.grid-iron.org/images/players/j/k57.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/58"><img
+                                        src="https://www.grid-iron.org/images/players/j/k58.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/59"><img
+                                        src="https://www.grid-iron.org/images/players/j/k59.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/60"><img
+                                        src="https://www.grid-iron.org/images/players/j/k60.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/61"><img
+                                        src="https://www.grid-iron.org/images/players/j/k61.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/62"><img
+                                        src="https://www.grid-iron.org/images/players/j/k62.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/63"><img
+                                        src="https://www.grid-iron.org/images/players/j/k63.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/64"><img
+                                        src="https://www.grid-iron.org/images/players/j/k64.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/65"><img
+                                        src="https://www.grid-iron.org/images/players/j/k65.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/66"><img
+                                        src="https://www.grid-iron.org/images/players/j/k66.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/67"><img
+                                        src="https://www.grid-iron.org/images/players/j/k67.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/68"><img
+                                        src="https://www.grid-iron.org/images/players/j/k68.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/69"><img
+                                        src="https://www.grid-iron.org/images/players/j/k69.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/70"><img
+                                        src="https://www.grid-iron.org/images/players/j/k70.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/71"><img
+                                        src="https://www.grid-iron.org/images/players/j/k71.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/72"><img
+                                        src="https://www.grid-iron.org/images/players/j/k72.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/73"><img
+                                        src="https://www.grid-iron.org/images/players/j/k73.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/74"><img
+                                        src="https://www.grid-iron.org/images/players/j/k74.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/75"><img
+                                        src="https://www.grid-iron.org/images/players/j/k75.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/76"><img
+                                        src="https://www.grid-iron.org/images/players/j/k76.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/77"><img
+                                        src="https://www.grid-iron.org/images/players/j/k77.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/78"><img
+                                        src="https://www.grid-iron.org/images/players/j/k78.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/79"><img
+                                        src="https://www.grid-iron.org/images/players/j/k79.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/80"><img
+                                        src="https://www.grid-iron.org/images/players/j/k80.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/81"><img
+                                        src="https://www.grid-iron.org/images/players/j/k81.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/82"><img
+                                        src="https://www.grid-iron.org/images/players/j/k82.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/83"><img
+                                        src="https://www.grid-iron.org/images/players/j/k83.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/84"><img
+                                        src="https://www.grid-iron.org/images/players/j/k84.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/85"><img
+                                        src="https://www.grid-iron.org/images/players/j/k85.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/86"><img
+                                        src="https://www.grid-iron.org/images/players/j/k86.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/87"><img
+                                        src="https://www.grid-iron.org/images/players/j/k87.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/88"><img
+                                        src="https://www.grid-iron.org/images/players/j/k88.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/89"><img
+                                        src="https://www.grid-iron.org/images/players/j/k89.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/90"><img
+                                        src="https://www.grid-iron.org/images/players/j/k90.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/91"><img
+                                        src="https://www.grid-iron.org/images/players/j/k91.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/92"><img
+                                        src="https://www.grid-iron.org/images/players/j/k92.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/93"><img
+                                        src="https://www.grid-iron.org/images/players/j/k93.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/94"><img
+                                        src="https://www.grid-iron.org/images/players/j/k94.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/95"><img
+                                        src="https://www.grid-iron.org/images/players/j/k95.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/96"><img
+                                        src="https://www.grid-iron.org/images/players/j/k96.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/97"><img
+                                        src="https://www.grid-iron.org/images/players/j/k97.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/98"><img
+                                        src="https://www.grid-iron.org/images/players/j/k98.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/99"><img
+                                        src="https://www.grid-iron.org/images/players/j/k99.png" width="75%"
+                                        height="75%" border="0" alt=""/></a></div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td valign="middle" align="center">
+                                <div class="setnr"><a
+                                        href="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/nrset/0"><img
+                                        src="https://www.grid-iron.org/images/players/j/kx.png" width="75%" height="75%"
+                                        border="0" alt=""/></a></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="player_face_wrapper"
+                     style="background-image: url('https://www.grid-iron.org/images/players/pos4.png'); background-repeat: no-repeat;">
+                    <div onclick="document.location.href='https://www.grid-iron.org/club/pldetails/team_id/12345/back//ntid/0/playerid/123457/Array'"
+                         style="z-index: 9000; position: absolute; width: 15px; height: 20px;  background-image: url(https://www.grid-iron.org/images/icons/arrow-l2.png); background-position: top; top: 70px; left: -6px; cursor: pointer;"
+                         onmouseover="this.style.backgroundPosition='bottom'"
+                         onmouseout="this.style.backgroundPosition='top'"></div>
+                    <div onclick="document.location.href='https://www.grid-iron.org/club/pldetails/team_id/12345/back//ntid/0/playerid/123458/Array'"
+                         style="z-index: 9000; position: absolute; width: 15px; height: 20px;  background-image: url(https://www.grid-iron.org/images/icons/arrow-r2.png); background-position: top; top: 70px; left: 111px; cursor: pointer;"
+                         onmouseover="this.style.backgroundPosition='bottom'"
+                         onmouseout="this.style.backgroundPosition='top'"></div>
+                </div>
+                <div class="player_basic_info_wrapper">
+                    <div class="player_basic_info_top">
+                        <!-- Kit nr. -->
+                        <div id="basenr_na" onclick="switchNr();">
+                            ?
+                        </div>
+                        <div class="player_basic_info_row" style="width: 600px;">
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                    <td width="30" height="20" align="center" valign="middle"><img
+                                            src="https://www.grid-iron.org/images/flags/byid/png/26.png" width="28"
+                                            height="16" border="0" title="Poland" alt="Poland"/></td>
+                                    <td align="left" valign="middle"
+                                        style="padding-left: 2px; font-size: 13px; font-weight: bold; color: #000000;">
+                                        Jan Kowalski<font style="font-size: 10px; font-weight: normal;">&nbsp;&nbsp;(ID
+                                        123456)</font></td>
+                                    <td valign="middle" align="right" style="padding-left: 10px;">
+                                        <div class="bookmark_small" style="float: right; cursor: pointer;"
+                                             onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="player_basic_info_row" style="width: 600px;">
+                            <table align="left" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td width="30" height="20" align="center" valign="middle">
+                                        <img src="https://www.grid-iron.org/images/flags/byid/png/26.png" width="28"
+                                             height="16" border="0" title="Poland" alt="Poland"/>
+                                    </td>
+                                    <td align="left" valign="middle" style="padding-left: 2px; font-size: 13px;"><a
+                                            style="text-decoration: none;"
+                                            href="https://www.grid-iron.org/club/team_id/12345">Unknown Team</a>
+                                        (Poland)
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="player_basic_info_row" style="margin-left: 30px; width: 500px;">
+                            <table align="left" cellpadding="1" cellspacing="0" border="0">
+                                <tr>
+                                    <td align="left" height="20" style="font-size: 13px; font-weight: normal;">16 year
+                                        old Quarterback
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="player_basic_info_bottom" style="margin-top: -2px;">
+                        <table cellspacing="0" cellpadding="0" border="0" style="padding-top: 2px;">
+                            <tr>
+                                <td width="100" align="right" valign="middle"
+                                    style="font-size: 13px; font-weight: bold;">
+                                    Rating&nbsp;
+                                </td>
+                                <td width="99" align="left" valign="middle"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_4.png" border="0" width="66"
+                                        height="27" alt=""/></td>
+                                <td width="140" align="right" valign="middle"
+                                    style="font-size: 13px; font-weight: bold; color: #000000;">Experience&nbsp;
+                                </td>
+                                <td width="66" align="left" valign="middle"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></td>
+                                <td width="140" align="right" valign="middle"
+                                    style="font-size: 13px; font-weight: bold; color: #000000;">Energy&nbsp;
+                                </td>
+                                <td width="90" align="left" valign="middle" style="font-size: 12px; padding-left: 2px;">
+                                    <font style="color: #397739;">100%</font></td>
+                            </tr>
+                            <tr>
+                                <td align="right" valign="middle"
+                                    style="font-size: 13px; font-weight: bold; color: #000000;">Talent&nbsp;
+                                </td>
+                                <td align="left" valign="middle"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_8.png" border="0" width="66"
+                                        height="27" alt=""/></td>
+                                <td align="right" valign="middle"
+                                    style="font-size: 12px; font-weight: bold; color: #000000;">Team chemistry&nbsp;
+                                </td>
+                                <td align="left" valign="middle"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_2.png" border="0" width="66"
+                                        height="27" alt=""/></td>
+                                <td align="right" valign="middle"
+                                    style="font-size: 12px; font-weight: bold; color: #000000;">Wage&nbsp;
+                                </td>
+                                <td width="90" align="left" valign="middle" style="font-size: 12px; padding-left: 2px;">
+                                    <b>$&nbsp;1,668 p/w</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="player_graph_wrapper">
+                    <div style="position: relative; width: 152px; height: 99px; text-align: center;">
+                        <img src="https://www.grid-iron.org/pages/club-players/attributes_graph.php?plid=123456"
+                             style="position: relative; top: 4px;" width="118" height="99" border="0" alt=""/>
+                        <div style="position: absolute; top: 0px; left: 73px; width: 20px; height: 13px;"
+                             onmousemove="displayTooltip('Attacking')" onmouseout="hideTooltip()"></div>
+                        <div style="position: absolute; top: 45px; left: 115px; width: 20px; height: 13px;"
+                             onmousemove="displayTooltip('Defending')" onmouseout="hideTooltip()"></div>
+                        <div style="position: absolute; top: 89px; left: 72px; width: 20px; height: 13px;"
+                             onmousemove="displayTooltip('Physical')" onmouseout="hideTooltip()"></div>
+                        <div style="position: absolute; top: 22px; left: 16px; width: 20px; height: 13px;"
+                             onmousemove="displayTooltip('Tactical')" onmouseout="hideTooltip()"></div>
+                        <div style="position: absolute; top: 76px; left: 21px; width: 20px; height: 13px;"
+                             onmousemove="displayTooltip('Kicking')" onmouseout="hideTooltip()"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile">
+                <div id="strength_popup" class="player_popup" style="display: none; top: 248px; left: 700px;">
+                    <table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;">
+                        <tr>
+                            <td valign="middle" align="center"
+                                style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Player's
+                                strength affected
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="left" style="font-size: 13px;">In the engine v2, the player's
+                                strength will be lower (16 instead of 15) because of his BMI (weight/height ratio)!<br/>You
+                                will need to rise his BMI value in order to make the player stronger!<br/>You can
+                                achieve this by puting the player on a special diet in the nutrition centre.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="speed_popup" class="player_popup" style="display: none; top: 222px; left: 700px;">
+                    <table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;">
+                        <tr>
+                            <td valign="middle" align="center"
+                                style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Player's
+                                speed affected
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="left" style="font-size: 13px;">In the engine v2, the player's
+                                speed will be lower (19 instead of 14) because of his BMI (weight/height ratio)!<br/>You
+                                will need to lower his BMI value in order to make the player faster!<br/>You can achieve
+                                this by puting the player on a special diet in the nutrition centre.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="agility_popup" class="player_popup" style="display: none; top: 268px; left: 700px;">
+                    <table width="250" cellspacing="1" cellpadding="1" style="border: 0px dotted #bbbbbb;">
+                        <tr>
+                            <td valign="middle" align="center"
+                                style="border-bottom: 1px dotted #bbbbbb; font-size: 14px; font-weight: bold;">Player's
+                                agility affected
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" align="left" style="font-size: 13px;">In the engine v2, the player's
+                                agility will be lower ( instead of 3) because of his BMI (weight/height ratio)!<br/>You
+                                will need to lower his BMI value in order to make the player more agile!<br/>You can
+                                achieve this by puting the player on a special diet in the nutrition centre.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="header_wrapper" style="z-index: 9999;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        SKILLS
+                        <div style="float: right;">
+                            <table cellspacing="0" cellpadding="0" border="0" style="font-size: 10px;">
+                                <tr>
+                                    <td valign="middle" style="padding-left: 2px;">Show detailed skill levels</td>
+                                    <td valign="middle" style="padding-right: 5px;"><input type="checkbox"
+                                                                                           style="cursor: pointer;"
+                                                                                           name="detail_skills"
+                                                                                           onclick="document.location.href='https://www.grid-iron.org/store/supporter'"/>
+                                    </td>
+                                    <td valign="middle" style="padding-right: 5px;">
+                                        <div id="supporter_small"
+                                             style="margin-top: 0px; margin-left: 0px; position: relative;"
+                                             onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell_txt1">&nbsp;Positioning</div>
+                    <div class="player_data_cell_val1"><span style="color: #000088; font-weight: bold;">5</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Passing</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">1</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Tackling</div>
+                    <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">1</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Speed</div>
+                    <div class="player_data_cell_val2"><span style="color: #888800; font-weight: bold;">14</span></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: 0px;">
+                    <div class="player_data_cell_txt2">&nbsp;Vision</div>
+                    <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">6</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Catching</div>
+                    <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">4</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Blocking</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">2</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Strength</div>
+                    <div class="player_data_cell_val1"><span style="color: #888800; font-weight: bold;">15</span></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: 0px;">
+                    <div class="player_data_cell_txt1">&nbsp;Intelligence</div>
+                    <div class="player_data_cell_val1"><span style="color: #008800; font-weight: bold;">18</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Carrying</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">1</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Kicking</div>
+                    <div class="player_data_cell_val1"><span style="color: #000088; font-weight: bold;">5</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Agility</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">3</span></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: 0px;">
+                    <div class="player_data_cell_txt2">&nbsp;Aggression</div>
+                    <div class="player_data_cell_val2"><span style="color: #000088; font-weight: bold;">7</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Footwork</div>
+                    <div class="player_data_cell_val1"><span style="color: #000088; font-weight: bold;">7</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Punting</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">2</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Stamina</div>
+                    <div class="player_data_cell_val1"><span style="color: #000000; font-weight: bold;">2</span></div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        WEIGHT & HEIGHT
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell_txt1">&nbsp;Weight (kg)</div>
+                    <div class="player_data_cell_val1"><b>100</b></div>
+                    <div class="player_data_cell_txt2">&nbsp;Height (cm)</div>
+                    <div class="player_data_cell_val2"><b>185</b></div>
+                    <div class="player_data_cell_txt1">&nbsp;BMI</div>
+                    <div class="player_data_cell_val1"><b>29.0</b></div>
+                    <div class="player_data_cell_txt2">&nbsp;</div>
+                    <div class="player_data_cell_val2"></div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        OTHER
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell_txt2">&nbsp;Teamwork</div>
+                    <div class="player_data_cell_val2"><span style="color: #888800; font-weight: bold;">15</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;Consistency</div>
+                    <div class="player_data_cell_val1"><span style="color: #888800; font-weight: bold;">10</span></div>
+                    <div class="player_data_cell_txt2">&nbsp;Weeks at club</div>
+                    <div class="player_data_cell_val2"><span style="color: #000000; font-weight: bold;">2</span></div>
+                    <div class="player_data_cell_txt1">&nbsp;</div>
+                    <div class="player_data_cell_val1"></div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        COMMENTS FROM THE COACH TEAM
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell1">&nbsp;Player's natural playing role is <b>Quarterback</b></div>
+                    <div class="player_data_cell2">&nbsp;He can also play adequately as <b>Defensive Lineman</b> and <b>Linebacker</b>
+                    </div>
+                    <div class="player_data_cell1">If really needed, he can also step in as <b>Wide Receiver</b>, <b>Running
+                        Back</b> and <b>&nbsp;Cornerback</b></div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        COMMENTS FROM THE PHYSIO TEAM
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell1">&nbsp;Herbert is <b>healthy</b> and available for selection</div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        TRAINING
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell1">
+                        <table cellspacing="1" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="middle" align="right">Change training group/focus to</td>
+                                <td valign="middle">
+                                    <select id="pltrain" name="pltrain" class="gui_select"
+                                            onchange="do_change_training(123456)"
+                                            style="font-size: 13px; margin-top: -2px;">
+                                        <optgroup label="Attacking"></optgroup>
+                                        <option value="1|0">Attacking / All skills</option>
+                                        <option value="1|4">Attacking / Agility</option>
+                                        <option value="1|6">Attacking / Catching</option>
+                                        <option value="1|7">Attacking / Passing</option>
+                                        <option value="1|9">Attacking / Carrying</option>
+                                        <option value="1|12">Attacking / Footwork</option>
+                                        <optgroup label="Defending"></optgroup>
+                                        <option value="2|0">Defending / All skills</option>
+                                        <option value="2|4">Defending / Agility</option>
+                                        <option value="2|5">Defending / Tackling</option>
+                                        <option value="2|10">Defending / Blocking</option>
+                                        <optgroup label="Kicking"></optgroup>
+                                        <option value="3|0">Kicking / All skills</option>
+                                        <option value="3|13">Kicking / Kicking</option>
+                                        <option value="3|14">Kicking / Punting</option>
+                                        <optgroup label="Tactical"></optgroup>
+                                        <option value="4|0">Tactical / All skills</option>
+                                        <option value="4|1">Tactical / Positioning</option>
+                                        <option value="4|8">Tactical / Vision</option>
+                                        <optgroup label="Fitness"></optgroup>
+                                        <option value="5|0">Fitness / All skills</option>
+                                        <option value="5|2">Fitness / Speed</option>
+                                        <option value="5|3" selected>Fitness / Strength</option>
+                                        <option value="5|11">Fitness / Stamina</option>
+                                    </select>
+                                </td>
+                                <td valign="middle" style="padding-left: 2px;">
+                                    <div id="training_loading"
+                                         style="width: 16px; height: 16px; background-image: url('https://www.grid-iron.org/images/icons/loader_training.png'); background-repeat: no-repeat; background-position: top;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        SHORT NOTES (MAX. 500 CHARACTERS)
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px; margin-bottom: 2px;">
+                    <div class="player_data_cell1" style="height: auto;">
+                        <textarea id="player_notes"></textarea>
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="middle"><input type="button" class="gui_button2"
+                                                           onclick="document.location.href='https://www.grid-iron.org/store/supporter'"
+                                                           value="Save changes"/>
+
+                                </td>
+                                <td valign="middle" align="left" style="padding-left: 2px;">
+                                    <a href="https://www.grid-iron.org/store/supporter"><img
+                                            src="https://www.grid-iron.org/images/icons/supporter2.png" width="22"
+                                            height="22" border="0" alt=""/></a>
+                                </td>
+                                <td valign="middle" align="left" style="padding-left: 2px;">
+                                    <div id="notes_save"
+                                         style="width: 16px; height: 16px; background-image: url('https://www.grid-iron.org/images/icons/loader_training.gif'); background-repeat: no-repeat; background-position: top;"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        COMPARE PLAYERS
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="player_data_cell1">
+                        <table cellspacing="1" cellpadding="0" border="0">
+                            <tr>
+                                <td valign="middle" align="right">Compare Herbert Guja and</td>
+                                <td valign="middle" align="left" style="padding-left: 4px;"><input type="hidden"
+                                                                                                   id="cmp_player_id1"
+                                                                                                   value="123456"/><select
+                                        id="cmp_player_id2" name="cmp_player_id" class="gui_select"
+                                        style="font-size: 13px; margin-top: -2px;">
+                                    <optgroup label="Offensive Lineman"/>
+                                    <option value="123456">Jan Kowalski</option>
+                                </select>
+                                </td>
+                                <td valign="middle" align="left" style="padding-left: 4px;">
+                                    <div id="supporter_small" style="margin-top: 0px;"
+                                         onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div id="positions" style="display: none;">
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        POSITIONS
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div id="player_positions">
+                        <div style="z-index: 0; margin-top: 2px; position: relative; width: 608px; height: 407px; background-image: url('https://www.grid-iron.org/images/players/positions/pitch.png'); background-repeat: no-repeat;">
+                            <div style="position: absolute; left: 38px; top: 248px;width: 532px; height: 51px;background-image: url('https://www.grid-iron.org/images/players/positions/3_3.png'); background-repeat: no-repeat;"></div>
+                            <div style="position: absolute; left: 272px; top: 284px;width: 65px; height: 65px;background-image: url('https://www.grid-iron.org/images/players/positions/5_3.png'); background-repeat: no-repeat;"></div>
+                            <div style="position: absolute; left: 39px; top: 219px;width: 530px; height: 51px;background-image: url('https://www.grid-iron.org/images/players/positions/8_3.png'); background-repeat: no-repeat;"></div>
+                            <div style="position: absolute; left: 250px; top: 232px;width: 108px; height: 34px;background-image: url('https://www.grid-iron.org/images/players/positions/6_2.png'); background-repeat: no-repeat;"></div>
+                            <div style="position: absolute; left: 217px; top: 204px;width: 174px; height: 53px;background-image: url('https://www.grid-iron.org/images/players/positions/7_2.png'); background-repeat: no-repeat;"></div>
+                            <div style="position: absolute; left: 285px; top: 266px;width: 39px; height: 39px;background-image: url('https://www.grid-iron.org/images/players/positions/4_1.png'); background-repeat: no-repeat;"></div>
+                            <div style="z-index: 1000; position: absolute; left: 24px; top: 67px; width: 562px; height: 273px; background-image: url('https://www.grid-iron.org/images/players/positions/players.png'); background-repeat: no-repeat;"></div>
+                            <div id="position_trigger_0"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 244px; top: 58px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(0)" onmouseout="hidePosition(0)"></div>
+                            <div id="position_tip_0" class="position_tip" style="left: 260px; top: 90px;">Kick&nbsp;returner</div>
+                            <div id="position_trigger_1"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 332px; top: 58px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(1)" onmouseout="hidePosition(1)"></div>
+                            <div id="position_tip_1" class="position_tip" style="left: 348px; top: 90px;">Kick&nbsp;returner</div>
+                            <div id="position_trigger_2"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 212px; top: 134px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(2)" onmouseout="hidePosition(2)"></div>
+                            <div id="position_tip_2" class="position_tip" style="left: 228px; top: 166px;">Safety</div>
+                            <div id="position_trigger_3"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 289px; top: 127px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(3)" onmouseout="hidePosition(3)"></div>
+                            <div id="position_tip_3" class="position_tip" style="left: 305px; top: 159px;">Safety</div>
+                            <div id="position_trigger_4"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 364px; top: 134px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(4)" onmouseout="hidePosition(4)"></div>
+                            <div id="position_tip_4" class="position_tip" style="left: 380px; top: 166px;">Safety</div>
+                            <div id="position_trigger_5"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 220px; top: 184px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(5)" onmouseout="hidePosition(5)"></div>
+                            <div id="position_tip_5" class="position_tip" style="left: 236px; top: 216px;">Safety</div>
+                            <div id="position_trigger_6"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 287px; top: 180px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(6)" onmouseout="hidePosition(6)"></div>
+                            <div id="position_tip_6" class="position_tip" style="left: 303px; top: 212px;">Safety</div>
+                            <div id="position_trigger_7"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 356px; top: 184px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(7)" onmouseout="hidePosition(7)"></div>
+                            <div id="position_tip_7" class="position_tip" style="left: 372px; top: 216px;">Safety</div>
+                            <div id="position_trigger_8"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 219px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(8)" onmouseout="hidePosition(8)"></div>
+                            <div id="position_tip_8" class="position_tip" style="left: 235px; top: 263px;">Linebacker
+                            </div>
+                            <div id="position_trigger_9"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 357px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(9)" onmouseout="hidePosition(9)"></div>
+                            <div id="position_tip_9" class="position_tip" style="left: 373px; top: 263px;">Linebacker
+                            </div>
+                            <div id="position_trigger_10"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 246px; top: 216px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(10)" onmouseout="hidePosition(10)"></div>
+                            <div id="position_tip_10" class="position_tip" style="left: 262px; top: 248px;">Linebacker
+                            </div>
+                            <div id="position_trigger_11"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 265px; top: 213px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(11)" onmouseout="hidePosition(11)"></div>
+                            <div id="position_tip_11" class="position_tip" style="left: 281px; top: 245px;">Linebacker
+                            </div>
+                            <div id="position_trigger_12"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 288px; top: 213px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(12)" onmouseout="hidePosition(12)"></div>
+                            <div id="position_tip_12" class="position_tip" style="left: 304px; top: 245px;">Linebacker
+                            </div>
+                            <div id="position_trigger_13"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 311px; top: 213px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(13)" onmouseout="hidePosition(13)"></div>
+                            <div id="position_tip_13" class="position_tip" style="left: 327px; top: 245px;">Linebacker
+                            </div>
+                            <div id="position_trigger_14"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 330px; top: 216px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(14)" onmouseout="hidePosition(14)"></div>
+                            <div id="position_tip_14" class="position_tip" style="left: 346px; top: 248px;">Linebacker
+                            </div>
+                            <div id="position_trigger_15"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 45px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(15)" onmouseout="hidePosition(15)"></div>
+                            <div id="position_tip_15" class="position_tip" style="left: 61px; top: 263px;">Cornerback
+                            </div>
+                            <div id="position_trigger_16"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 146px; top: 230px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(16)" onmouseout="hidePosition(16)"></div>
+                            <div id="position_tip_16" class="position_tip" style="left: 162px; top: 262px;">Cornerback
+                            </div>
+                            <div id="position_trigger_17"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 430px; top: 230px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(17)" onmouseout="hidePosition(17)"></div>
+                            <div id="position_tip_17" class="position_tip" style="left: 446px; top: 262px;">Cornerback
+                            </div>
+                            <div id="position_trigger_18"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 531px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(18)" onmouseout="hidePosition(18)"></div>
+                            <div id="position_tip_18" class="position_tip" style="left: 547px; top: 263px;">Cornerback
+                            </div>
+                            <div id="position_trigger_19"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 255px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(19)" onmouseout="hidePosition(19)"></div>
+                            <div id="position_tip_19" class="position_tip" style="left: 271px; top: 263px;">Defensive&nbsp;Lineman</div>
+                            <div id="position_trigger_20"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 272px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(20)" onmouseout="hidePosition(20)"></div>
+                            <div id="position_tip_20" class="position_tip" style="left: 288px; top: 263px;">Defensive&nbsp;Lineman</div>
+                            <div id="position_trigger_21"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 289px; top: 229px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(21)" onmouseout="hidePosition(21)"></div>
+                            <div id="position_tip_21" class="position_tip" style="left: 305px; top: 261px;">Defensive&nbsp;Lineman</div>
+                            <div id="position_trigger_22"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 305px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(22)" onmouseout="hidePosition(22)"></div>
+                            <div id="position_tip_22" class="position_tip" style="left: 321px; top: 263px;">Defensive&nbsp;Lineman</div>
+                            <div id="position_trigger_23"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 322px; top: 231px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(23)" onmouseout="hidePosition(23)"></div>
+                            <div id="position_tip_23" class="position_tip" style="left: 338px; top: 263px;">Defensive&nbsp;Lineman</div>
+                            <div id="position_trigger_24"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 259px; top: 258px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(24)" onmouseout="hidePosition(24)"></div>
+                            <div id="position_tip_24" class="position_tip" style="left: 275px; top: 290px;">Offensive&nbsp;Lineman</div>
+                            <div id="position_trigger_25"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 274px; top: 257px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(25)" onmouseout="hidePosition(25)"></div>
+                            <div id="position_tip_25" class="position_tip" style="left: 290px; top: 289px;">Offensive&nbsp;Lineman</div>
+                            <div id="position_trigger_26"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 289px; top: 253px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(26)" onmouseout="hidePosition(26)"></div>
+                            <div id="position_tip_26" class="position_tip" style="left: 305px; top: 285px;">Offensive&nbsp;Lineman</div>
+                            <div id="position_trigger_27"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 305px; top: 257px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(27)" onmouseout="hidePosition(27)"></div>
+                            <div id="position_tip_27" class="position_tip" style="left: 321px; top: 289px;">Offensive&nbsp;Lineman</div>
+                            <div id="position_trigger_28"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 318px; top: 258px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(28)" onmouseout="hidePosition(28)"></div>
+                            <div id="position_tip_28" class="position_tip" style="left: 334px; top: 290px;">Offensive&nbsp;Lineman</div>
+                            <div id="position_trigger_29"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 237px; top: 255px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(29)" onmouseout="hidePosition(29)"></div>
+                            <div id="position_tip_29" class="position_tip" style="left: 253px; top: 287px;">Tight&nbsp;End</div>
+                            <div id="position_trigger_30"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 339px; top: 255px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(30)" onmouseout="hidePosition(30)"></div>
+                            <div id="position_tip_30" class="position_tip" style="left: 355px; top: 287px;">Tight&nbsp;End</div>
+                            <div id="position_trigger_31"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 289px; top: 271px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(31)" onmouseout="hidePosition(31)"></div>
+                            <div id="position_tip_31" class="position_tip" style="left: 305px; top: 303px;">
+                                Quarterback
+                            </div>
+                            <div id="position_trigger_32"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 269px; top: 285px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(32)" onmouseout="hidePosition(32)"></div>
+                            <div id="position_tip_32" class="position_tip" style="left: 285px; top: 317px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_33"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 287px; top: 292px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(33)" onmouseout="hidePosition(33)"></div>
+                            <div id="position_tip_33" class="position_tip" style="left: 303px; top: 324px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_34"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 308px; top: 285px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(34)" onmouseout="hidePosition(34)"></div>
+                            <div id="position_tip_34" class="position_tip" style="left: 324px; top: 317px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_35"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 269px; top: 312px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(35)" onmouseout="hidePosition(35)"></div>
+                            <div id="position_tip_35" class="position_tip" style="left: 285px; top: 344px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_36"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 288px; top: 319px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(36)" onmouseout="hidePosition(36)"></div>
+                            <div id="position_tip_36" class="position_tip" style="left: 304px; top: 351px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_37"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 308px; top: 312px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(37)" onmouseout="hidePosition(37)"></div>
+                            <div id="position_tip_37" class="position_tip" style="left: 324px; top: 344px;">Running&nbsp;Back</div>
+                            <div id="position_trigger_38"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 249px; top: 312px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(38)" onmouseout="hidePosition(38)"></div>
+                            <div id="position_tip_38" class="position_tip" style="left: 265px; top: 344px;">Kicker</div>
+                            <div id="position_trigger_39"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 14px; top: 256px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(39)" onmouseout="hidePosition(39)"></div>
+                            <div id="position_tip_39" class="position_tip" style="left: 30px; top: 288px;">Gunner</div>
+                            <div id="position_trigger_40"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 565px; top: 256px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(40)" onmouseout="hidePosition(40)"></div>
+                            <div id="position_tip_40" class="position_tip" style="left: 581px; top: 288px;">Gunner</div>
+                            <div id="position_trigger_41"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 45px; top: 255px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(41)" onmouseout="hidePosition(41)"></div>
+                            <div id="position_tip_41" class="position_tip" style="left: 61px; top: 287px;">Wide&nbsp;Receiver</div>
+                            <div id="position_trigger_42"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 146px; top: 256px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(42)" onmouseout="hidePosition(42)"></div>
+                            <div id="position_tip_42" class="position_tip" style="left: 162px; top: 288px;">Wide&nbsp;Receiver</div>
+                            <div id="position_trigger_43"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 432px; top: 256px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(43)" onmouseout="hidePosition(43)"></div>
+                            <div id="position_tip_43" class="position_tip" style="left: 448px; top: 288px;">Wide&nbsp;Receiver</div>
+                            <div id="position_trigger_44"
+                                 style="cursor: pointer; z-index: 3000; position: absolute; left: 533px; top: 255px; width: 32px; height: 30px;"
+                                 onmouseover="showPosition(44)" onmouseout="hidePosition(44)"></div>
+                            <div id="position_tip_44" class="position_tip" style="left: 549px; top: 287px;">Wide&nbsp;Receiver</div>
+                        </div>
+
+                    </div>
+                    <div id="player_all_positions">
+                        <div class="posrat_wrapper">
+                            <div class="posrat_txt2">Offensive Lineman&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Tight End&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt2">Wide Receiver&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_3.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Quarterback&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_4.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt2">Running Back&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_2.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Defensive Lineman&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_3.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt2">Linebacker&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_3.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Cornerback&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_2.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt2">Safety&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Kicker&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt2">Gunner&nbsp;&nbsp;</div>
+                            <div class="posrat_val2">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_2.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                            <div class="posrat_txt1">Kick returner&nbsp;&nbsp;</div>
+                            <div class="posrat_val1">
+                                <div class="player_rating_wrapper" style="margin-top: 1px; margin-left: 9px;"><img
+                                        src="https://www.grid-iron.org/images/icons/rating_1.png" border="0" width="66"
+                                        height="27" alt=""/></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="stats" style="display: none;">
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        STATS
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px;">
+                    <div class="stats_header_txt"><select onchange="change_stats_season()" id="history" name="history"
+                                                          class="gui_select"
+                                                          style="float: left; position: relative; font-size: 16px; margin-top: 10px; margin-left: 20px;"
+                                                          disabled>
+                        <option value="1">Season 1</option>
+                        <option value="2">Season 2</option>
+                        <option value="3">Season 3</option>
+                        <option value="4">Season 4</option>
+                        <option value="5">Season 5</option>
+                        <option value="6">Season 6</option>
+                        <option value="7">Season 7</option>
+                        <option value="8">Season 8</option>
+                        <option value="9">Season 9</option>
+                        <option value="10">Season 10</option>
+                        <option value="11">Season 11</option>
+                        <option value="12">Season 12</option>
+                        <option value="13">Season 13</option>
+                        <option value="14">Season 14</option>
+                        <option value="15">Season 15</option>
+                        <option value="16">Season 16</option>
+                        <option value="17">Season 17</option>
+                        <option value="18">Season 18</option>
+                        <option value="19">Season 19</option>
+                        <option value="20">Season 20</option>
+                        <option value="21">Season 21</option>
+                        <option value="22">Season 22</option>
+                        <option value="23">Season 23</option>
+                        <option value="24">Season 24</option>
+                        <option value="25">Season 25</option>
+                        <option value="26">Season 26</option>
+                        <option value="27">Season 27</option>
+                        <option value="28">Season 28</option>
+                        <option value="29">Season 29</option>
+                        <option value="30">Season 30</option>
+                        <option value="31">Season 31</option>
+                        <option value="32">Season 32</option>
+                        <option value="33">Season 33</option>
+                        <option value="34">Season 34</option>
+                        <option value="35">Season 35</option>
+                        <option value="36">Season 36</option>
+                        <option value="37">Season 37</option>
+                        <option value="38">Season 38</option>
+                        <option value="39">Season 39</option>
+                        <option value="40">Season 40</option>
+                        <option value="41" selected>Season 41</option>
+                    </select>
+                        <div id="supporter_small"
+                             style="float: left; position: relative; margin-top: 0px; margin-left: 4px;"
+                             onclick="document.location.href='https://www.grid-iron.org/store/supporter'"></div>
+                    </div>
+                    <div id="str1" class="stats_header_val">League<br/>(Season 41)</div>
+                    <div id="str2" class="stats_header_val">Regional cup<br/>(Season 41)</div>
+                    <div id="str3" class="stats_header_val">International<br/>(Season 41)</div>
+                    <div class="stats_header_val">National team<br/>(Total)</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Games</div>
+                    <div id="games" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="games_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="games_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Touchdowns
+                    </div>
+                    <div id="touchdowns" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="touchdowns_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="touchdowns_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Passing (yrd)
+                    </div>
+                    <div id="pass_yrd" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="pass_yrd_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="pass_yrd_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Passing (att)
+                    </div>
+                    <div id="pass_att" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="pass_att_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="pass_att_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Passing (avg)
+                    </div>
+                    <div id="pass_avg" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="pass_avg_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="pass_avg_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Passing (lng)
+                    </div>
+                    <div id="pass_lng" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="pass_lng_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="pass_lng_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Rushing (yrd)
+                    </div>
+                    <div id="rush_yrd" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rush_yrd_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rush_yrd_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Rushing (att)
+                    </div>
+                    <div id="rush_att" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="rush_att_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="rush_att_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Rushing (avg)
+                    </div>
+                    <div id="rush_avg" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rush_avg_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rush_avg_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Rushing (lng)
+                    </div>
+                    <div id="rush_lng" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="rush_lng_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="rush_lng_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Receiving (yrd)
+                    </div>
+                    <div id="rec_yrd" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rec_yrd_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rec_yrd_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Receiving (att)
+                    </div>
+                    <div id="rec_att" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="rec_att_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="rec_att_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Receiving (avg)
+                    </div>
+                    <div id="rec_avg" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rec_avg_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="rec_avg_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Receiving
+                        (lng)
+                    </div>
+                    <div id="rec_lng" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="rec_lng_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="rec_lng_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Interceptions
+                    </div>
+                    <div id="interceptions" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="interceptions_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="interceptions_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Interceptions
+                        (yrd)
+                    </div>
+                    <div id="interceptions_yrd" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="interceptions_yrd_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="interceptions_yrd_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Interceptions
+                        (avg)
+                    </div>
+                    <div id="interceptions_avg" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="interceptions_avg_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="interceptions_avg_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Interceptions
+                        (lng)
+                    </div>
+                    <div id="interceptions_lng" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="interceptions_lng_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="interceptions_lng_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Field Goals
+                        (att)
+                    </div>
+                    <div id="fg_att" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="fg_att_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="fg_att_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Field Goals</div>
+                    <div id="fg" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="fg_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="fg_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Field goals (%)
+                    </div>
+                    <div id="fg_perc" class="player_data_cell_val1" style="width: 165px;">/</div>
+                    <div id="fg_perc_cup" class="player_data_cell_val1" style="width: 165px;">/</div>
+                    <div id="fg_perc_int" class="player_data_cell_val1" style="width: 165px;">/</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">/</div>
+
+                    <div class="player_data_cell_txt2"
+                         style="border-bottom: 1px dashed #555555; width: 323px; font-weight: bold;">&nbsp;Field Goals
+                        (lng)
+                    </div>
+                    <div id="fg_lng" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="fg_lng_cup" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div id="fg_lng_int" class="player_data_cell_val2"
+                         style="border-bottom: 1px dashed #555555; width: 165px;">0
+                    </div>
+                    <div class="player_data_cell_val2" style="border-bottom: 1px dashed #555555; width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Tackles</div>
+                    <div id="tackles" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="tackles_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="tackles_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt2" style="width: 323px; font-weight: bold;">&nbsp;Sacks</div>
+                    <div id="sacks" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="sacks_cup" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div id="sacks_int" class="player_data_cell_val2" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val2" style="width: 165px;">0</div>
+
+                    <div class="player_data_cell_txt1" style="width: 323px; font-weight: bold;">&nbsp;Fumbles</div>
+                    <div id="fumbles" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="fumbles_cup" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div id="fumbles_int" class="player_data_cell_val1" style="width: 165px;">0</div>
+                    <div class="player_data_cell_val1" style="width: 165px;">0</div>
+
+                </div>
+            </div>
+
+            <div id="trdetails" style="display: none;">
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        SKILLS
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+            </div>
+
+            <div id="transfer" style="display: none;">
+                <div class="header_wrapper" style="z-index: 9999; margin-top: 1px;">
+                    <div class="header_left"></div>
+                    <div class="header_tile" style="width: 976px;">
+                        TRANSFER LIST THIS PLAYER
+                        <div style="float: right; position: relative; margin-top: 6px; width: 12px; height: 12px; cursor: pointer;"
+                             onclick="hidetransfer()">
+                            <img src="https://www.grid-iron.org/images/gui/delete.gif" width="12" height="12" border="0"
+                                 alt=""/>
+                        </div>
+                    </div>
+                    <div class="header_right"></div>
+                </div>
+                <div class="player_data_wrapper" style="margin-top: -1px; height: 28px;">
+                    <div class="player_data_cell1" style="padding-top: 2px; padding-bottom: 2px;">
+                        <form name="sellplayer_form" id="sellplayer_form"
+                              action="https://www.grid-iron.org/club/pldetails/team_id/12345/playerid/123456/back//Array"
+                              method="post">
+                            <table cellspacing="1" cellpadding="0" border="0"
+                                   style="font-size: 14px; margin-top: 0px; margin-bottom: 2px;">
+                                <tr>
+                                    <td align="left" valign="middle" style="padding-left: 2px;">Set asking price for
+                                        this player :
+                                    </td>
+                                    <td width="62" align="center" valign="middle">
+                                        <input type="text" class="gui_textfield" name="askprice" id="askprice"
+                                               style="width: 60px; text-align: center;" value="1000"/>
+                                    </td>
+                                    <td width="10" align="center" valign="middle">$</td>
+                                    <td align="left" valign="middle">&nbsp;&nbsp;<input type="button"
+                                                                                        class="gui_button2"
+                                                                                        style="height: 20px;"
+                                                                                        value="Sell!"
+                                                                                        onclick="confirmsell(123456, 12345, 'Do you really want to SELL this player?\nIt will cost you 2,500 $ and 21% of the final selling price (GIA tax)!\nAlso note that you cannot change your mind after you press OK!')"/>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="subheader_wrapper_narrow">
+                <div class="bottom_subheader_left_narrow"></div>
+                <div class="bottom_subheader_tile_narrow" style="width: 971px;"></div>
+                <div class="bottom_subheader_right_narrow"></div>
+            </div>
+
+            <div class="player_data_wrapper" style="margin-top: 4px; margin-bottom: 4px;">
+                <div style="float: left; position: relative; margin-left: 2px;"><input type="button" class="gui_button2"
+                                                                                       value="Back"
+                                                                                       onclick="document.location.href='https://www.grid-iron.org/club/players/team_id/12345/section/0'"/>
+                </div>
+                <div style="float: right; position: relative; margin-left: 6px;"
+                "><input type="button" class="gui_button2" style="cursor: default; color: #aaaaaa;" value="Scout report"
+                         disabled/></div>
+            <div style="float: right; position: relative; margin-left: 6px;"
+            "><input type="button" class="gui_button2" value="Fire player"
+                     onclick="confirmfire('Do you really want to FIRE this player?\nThis action cannot be undone!')"/>
+        </div>
+        <div style="float: right; position: relative; margin-left: 6px;"><input type="button" class="gui_button2"
+                                                                                value="Sell player"
+                                                                                onclick="showtransfer()"/></div>
+    </div>
+    <form name="fireplayer_form" id="fireplayer_form" action="https://www.grid-iron.org/club/players/section/0"
+          method="post">
+        <input type="hidden" name="fireid" value="123456"/>
+    </form>
+    <form name="scoutplayer_form" id="scoutplayer_form"
+          action="https://www.grid-iron.org/club/pldetails/playerid/123456/back//ntid/0/team_id/12345/Array"
+          method="post">
+        <input type="hidden" name="scoutid" value="123456"/></form>
+    <form name="ntplayer_form" id="ntplayer_form"
+          action="https://www.grid-iron.org/club/pldetails/playerid/123456/back//ntid/0/team_id/12345"
+          method="post"></form>
+
+    <div class="fixall"></div>
+</div>
+</div>
+</div>
+<div id="footer_container">
+    <div id="subfooter_container">
+        <div id="subfooter_left"></div>
+        <div id="subfooter_tile"></div>
+        <div id="subfooter_right"></div>
+        <div id="copyright">&copy;2023 Melderon</div>
+        <div class="bottom_links_wrapper" style="width: 800px;">
+            <div class="bottom_link" style="margin-left: 15px;"><a style="color: inherit;"
+                                                                   href="https://www.grid-iron.org/pravilnik_zasebnost-gi-en.pdf">Privacy
+                and Personal Data Protection Policy</a></div>
+
+            <div class="bottom_link" onclick="document.location.href='https://www.grid-iron.org/home/contactgi'">Contact
+                us
+            </div>
+            <div class="bottom_link" style="margin-right: 15px;"
+                 onclick="document.location.href='https://www.grid-iron.org/home/rules'">Game rules
+            </div>
+            <div class="bottom_link" style="margin-right: 15px;"
+                 onclick="document.location.href='https://www.grid-iron.org/home/help'">Help/FAQ
+            </div>
+        </div>
+        <!-- <div id="facebook" onclick="document.location.href='http://www.facebook.com/home.php?#!/pages/Grid-Iron/128508227188351?ref=sgm'"></div>
+        <div id="twitter" onclick="document.location.href='http://www.twitter.com/GridIron_game'"></div>
+        <div id="gplus" onclick="document.location.href='https://plus.google.com/109671568001987160003'"></div> -->
+    </div>
+</div>
+</body>
+</html>
