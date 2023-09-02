@@ -1,4 +1,4 @@
-from model.TeamPlayer import TeamPlayer
+from model.PlayerParse import PlayerParse
 from site_parser.players_data import get_players_list, get_player_data
 import os
 
@@ -13,7 +13,7 @@ def test_get_players_list_count():
 
 
 def test_get_players_list_data():
-    __result = TeamPlayer(123456, 'Jan Kowalski')
+    __result = PlayerParse(123456, 'Jan Kowalski')
     f = open(f'{os.path.dirname(__file__)}/players.html', 'r')
     players_site_data = f.read()
     f.close()

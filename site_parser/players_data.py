@@ -2,10 +2,10 @@ from bs4 import BeautifulSoup, Tag
 from typing import List, Dict
 import re
 
-from model.TeamPlayer import TeamPlayer
+from model.PlayerParse import PlayerParse
 
 
-def get_players_list(page: str) -> List[TeamPlayer]:
+def get_players_list(page: str) -> List[PlayerParse]:
     soup = BeautifulSoup(page, 'html5lib')
     players = []
     for line_name in ('offense', 'defense', 'special'):
@@ -15,7 +15,7 @@ def get_players_list(page: str) -> List[TeamPlayer]:
             player_raw_data = player_data.pop(1)
             player_id = re.search(r'.*/playerid/(\d+)', player_raw_data.find('a').get('href')).groups()[0]
             player_name = player_raw_data.find('a').text
-            p = TeamPlayer(player_id, player_name)
+            p = PlayerParse(player_id, player_name)
             players.append(p)
     return players
 
@@ -78,11 +78,11 @@ def __get_player_data_current_training(pltrain: Tag) -> tuple[str, int, int]:
     return value_text, int(value[0]), int(value[1])
 
 
-def get_player_data(page: str) -> TeamPlayer:
+def get_player_data(page: str) -> PlayerParse:
     soup = BeautifulSoup(page, 'html5lib')
     basic_info_top = soup.find('div', attrs={'class': 'player_basic_info_top'})
     player_data = __get_player_data_basic_info_top(basic_info_top)
-    player = TeamPlayer(player_data['player_id'], player_data['player_name'])
+    player = PlayerParse(player_data['player_id'], player_data['player_name'])
     player.age = int(player_data['player_age'])
     basic_info_bottom = soup.find('div', attrs={'class': 'player_basic_info_bottom'})
     for basic_data_name, basic_data_value in __get_player_data_basic_info_bottom(basic_info_bottom).items():
