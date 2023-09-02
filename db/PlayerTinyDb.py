@@ -3,7 +3,6 @@ from tinydb import TinyDB, Query, where
 
 
 class PlayerTinyDb:
-
     def __init__(self, db_file='./db.json'):
         self.__db = TinyDB(db_file)
         self.__players_table = self.__db.table('players')
