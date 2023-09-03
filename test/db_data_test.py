@@ -35,3 +35,10 @@ def test_get_from_db():
     player_db = test_db.get_player(p.id)
     assert p.id == player_db.id
     assert player_db.training_data is not None
+
+
+def test_get_from_db_none():
+    doc_id = test_db.save_player(PlayerDb(p))
+    assert doc_id
+    player_db = test_db.get_player(p.id + 1)
+    assert player_db is None
