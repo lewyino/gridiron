@@ -1,12 +1,11 @@
 import argparse
 import getpass
-from typing import Callable, Any
+from typing import Callable
 
 from calculate_best_player_position import *
 from get_match_team import *
 from get_player_with_potential import *
-from parse_player_data_and_save_in_db import *
-from parse_team_data import get_data
+from parse_team_data import get_players_data
 from stats.match_stats import *
 from stats.team_stats import *
 
@@ -35,7 +34,7 @@ from stats.team_stats import *
 
 
 def parse_team_data(verbose: bool, _config: Dict):
-    get_data(_config['login'], _config['password'])
+    get_players_data(_config['login'], _config['password'])
     # parse_player_data_and_save_in_db(_config['login'], _config['password'], _config['verbose'])
 
 

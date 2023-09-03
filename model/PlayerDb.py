@@ -8,6 +8,7 @@ from model.PlayerParse import PlayerParse
 class PlayerDb:
     def __init__(self, data: Document | PlayerParse | Dict):
         self.id = None
+        self.name = None
         self.skills = {}
         self.weeks_at_club = 0
         if isinstance(data, PlayerParse):

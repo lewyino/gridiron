@@ -19,3 +19,6 @@ class PlayerTinyDb:
 
     def len(self):
         return len(self.__players_table)
+
+    def close(self):
+        self.__db.close()
