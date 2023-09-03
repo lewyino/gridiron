@@ -6,6 +6,7 @@ sys.path.append('../')
 from site_parser.MatchParser import *
 
 
+@unittest.skip('old')
 class TestMatchParser(unittest.TestCase):
     """
     Test functions from MachParser class

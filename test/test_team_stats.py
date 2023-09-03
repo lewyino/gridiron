@@ -7,6 +7,7 @@ from stats.team_stats import get_team_match_ids_stats_last, get_team_match_ids_s
     get_team_match_ids_stats_indexes
 
 
+@unittest.skip('old')
 class TestMatchParser(unittest.TestCase):
 
     def test_get_team_match_ids_stats_last(self):

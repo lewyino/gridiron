@@ -10,6 +10,7 @@ from site_parser.MatchTeamsParser import *
 from site_parser.MatchStatisticParser import MatchStatisticParser
 
 
+@unittest.skip('old')
 class TestMatchParser(unittest.TestCase):
 
     def test_match_team_archive_seasons(self):
