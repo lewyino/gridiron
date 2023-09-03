@@ -2,6 +2,8 @@ class PlayerParse:
     def __init__(self, _id: str | int, name: str):
         self.id = int(_id) if type(_id) == str else _id
         self.name = " ".join(name.split())
+        self.skills = {}
+        self.current_training = ('', 0, 0)
 
     def __str__(self):
         return f'id: {self.id}\n' \

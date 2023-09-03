@@ -88,8 +88,10 @@ def get_player_data(page: str) -> PlayerParse:
     for basic_data_name, basic_data_value in __get_player_data_basic_info_bottom(basic_info_bottom).items():
         setattr(player, basic_data_name, basic_data_value)
     player_profile = soup.find('div', attrs={'id': 'profile'})
-    for skill_name, skill_value in __get_player_data_skills(player_profile).items():
-        setattr(player, skill_name, skill_value)
+    player.skills = __get_player_data_skills(player_profile)
+    weeks_at_club = player.skills['weeks_at_club']
+    del player.skills['weeks_at_club']
+    player.weeks_at_club = weeks_at_club
     for body_name, body_value in __get_player_data_body(player_profile).items():
         setattr(player, body_name, body_value)
     pltrain = soup.find('select', attrs={'id': 'pltrain'})
